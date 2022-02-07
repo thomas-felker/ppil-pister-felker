@@ -1,0 +1,8 @@
+﻿  ClientDessin.cpp
+C:\Users\satom\Documents\fac\L3 Info\PPIL\projetSyntheseL3\clientdessin\clientdessin\ClientDessin.cpp(61,28): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+C:\Users\satom\Documents\fac\L3 Info\PPIL\projetSyntheseL3\clientdessin\clientdessin\ClientDessin.cpp(81,1): warning C4297: 'ClientDessin::~ClientDessin' : la fonction lève une exception alors qu'elle est présumée ne pas le faire
+C:\Users\satom\Documents\fac\L3 Info\PPIL\projetSyntheseL3\clientdessin\clientdessin\ClientDessin.cpp(81,1): message : le destructeur ou l'annulateur d'allocation comporte une spécification d'exception qui ne peut pas être levée (éventuellement implicite)
+C:\Users\satom\Documents\fac\L3 Info\PPIL\projetSyntheseL3\clientdessin\clientdessin\ClientDessin.cpp(85,1): warning C4297: 'ClientDessin::~ClientDessin' : la fonction lève une exception alors qu'elle est présumée ne pas le faire
+C:\Users\satom\Documents\fac\L3 Info\PPIL\projetSyntheseL3\clientdessin\clientdessin\ClientDessin.cpp(85,1): message : le destructeur ou l'annulateur d'allocation comporte une spécification d'exception qui ne peut pas être levée (éventuellement implicite)
+ClientDessin.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/INCREMENTAL:NO'
+  clientdessin.vcxproj -> C:\Users\satom\Documents\fac\L3 Info\PPIL\projetSyntheseL3\clientdessin\Debug\clientdessin.exe
