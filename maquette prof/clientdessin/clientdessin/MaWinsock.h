@@ -3,15 +3,16 @@
 /**
 singleton contenant l'initialisation de la librairie winsock2.
 
-Assure que la DLL de la winsock est initialisée une unique fois 
+Assure que la DLL de la winsock est initialisï¿½e une unique fois 
 
 */
 
 #include <WinSock2.h>
+#pragma comment(lib, "ws2_32")
 
 class MaWinsock
 {
-WSADATA wsaData;	//  structure contenant les données de la librairie winsock à initialiser. représente la DLL.
+WSADATA wsaData;	//  structure contenant les donnï¿½es de la librairie winsock ï¿½ initialiser. reprï¿½sente la DLL.
 MaWinsock(void);
 
 static MaWinsock * instanceUnique;

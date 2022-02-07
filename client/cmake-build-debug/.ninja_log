@@ -1,0 +1,14 @@
+# ninja log v5
+489	1325	6659647769178613	CMakeFiles/client.dir/Forme.cpp.obj	518c2bebf7c6699b
+2	1005	6659647765720590	CMakeFiles/client.dir/Cercle.cpp.obj	c1e08149a0f1788f
+44	5731	6659649292224886	CMakeFiles/client.dir/Erreur.cpp.obj	101250c72d264ea3
+142	1233	6659647768738865	CMakeFiles/client.dir/Groupe.cpp.obj	9ae982424c902fd2
+98	11300	6659649351049642	CMakeFiles/client.dir/MaWinsock.cpp.obj	b288c8e8b833945f
+1234	1726	6659647773446192	CMakeFiles/client.dir/Triangle.cpp.obj	b17235fa731fa670
+225	1869	6659647775574957	CMakeFiles/client.dir/main.cpp.obj	4e8fa7b3a37d90d
+1061	1587	6659647772276842	CMakeFiles/client.dir/Segment.cpp.obj	ea834109b19df2a2
+1326	1762	6659647774085811	CMakeFiles/client.dir/Polygone.cpp.obj	89010fdfb0c30e0b
+1557	3185	6659647788157762	CMakeFiles/client.dir/Vecteur2D.cpp.obj	1df80704a5f1e13e
+10	11316	6659649351279507	CMakeFiles/client.dir/ClientDessin.cpp.obj	5f23f93958fd2b54
+11	615	6659655487733395	client.exe	58b669d5c0024b06
+3	447	6659655655454638	build.ninja	7fb0af4801b88105
