@@ -27,4 +27,4 @@ add_executable(client
         Triangle.cpp
         Triangle.h
         Vecteur2D.cpp
-        Vecteur2D.h)
+        Vecteur2D.h TestClient1.cpp TestClient1.h)

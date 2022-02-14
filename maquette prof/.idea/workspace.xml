@@ -12,14 +12,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="810e0e98-5971-45ca-81c0-fecb0fe064c7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/TestClient1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/TestClient1.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/serveur.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/CadreDessin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/SessionDessin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/exceptions/FormeManquanteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Cercle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Forme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Groupe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Polygone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Segment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../serveur/src/formes/Vecteur2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../client/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ClientDessin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ClientDessin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/Vecteur2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../client/Vecteur2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/Vecteur2D.h" beforeDir="false" afterPath="$PROJECT_DIR$/../client/Vecteur2D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/.cmake/api/v1/reply/cache-v2-53a28f38c2719ef40b4d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0ee2b5587da8bb7dae81.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-07T19-32-45-0639.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/.cmake/api/v1/reply/target-client-Debug-e7a001c1cfeb9ddb5766.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/CMakeFiles/client.dir/ClientDessin.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/CMakeFiles/client.dir/ClientDessin.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../client/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ppil-pister-felker.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ppil-pister-felker.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ppil-pister-felker.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/ppil-pister-felker.vcxproj.user" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-dea192236c274adf14f1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-07T19-31-24-0340.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +82,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -81,7 +106,7 @@
       <updated>1644258394829</updated>
       <workItem from="1644258396230" duration="24000" />
       <workItem from="1644261835896" duration="655000" />
-      <workItem from="1644842722086" duration="655000" />
+      <workItem from="1644842722086" duration="7036000" />
     </task>
     <servers />
   </component>

@@ -116,7 +116,7 @@ void ClientDessin::traceSegment( const int x1, const int y1, const int x2, const
 {
     ostringstream oss;
 
-    oss << "drawLine, " << x1 << ", " << y1 << ", " << x2 << ", " << y2 << "\r\n";
+    oss << "Segment, " << x1 << ", " << y1 << ", " << x2 << ", " << y2 << "\r\n";
 
     string requete = oss.str();
 
@@ -139,7 +139,7 @@ void ClientDessin::remplitEllipse( const int bordGauche, const int bordHaut, con
 {
     ostringstream oss;
 
-    oss << "fillOval" << ", " << bordGauche << ", " << bordHaut << ", " << largeur << ", " << hauteur << "\r\n";
+    oss << "Cercle" << ", " << bordGauche << ", " << bordHaut << ", " << largeur << ", " << hauteur << "\r\n";
 
     string requete = oss.str();
 
