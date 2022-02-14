@@ -12,24 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="810e0e98-5971-45ca-81c0-fecb0fe064c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/.idea/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/maquette prof.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/ClientDessin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../client/ClientDessin.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/Erreur.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../client/Erreur.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/Erreur.h" beforeDir="false" afterPath="$PROJECT_DIR$/../client/Erreur.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/MaWinsock.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../client/MaWinsock.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/MaWinsock.h" beforeDir="false" afterPath="$PROJECT_DIR$/../client/MaWinsock.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientdessin/clientdessin/ClientDessin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/clientdessin/clientdessin/ClientDessin.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientdessin/clientdessin/MaWinsock.h" beforeDir="false" afterPath="$PROJECT_DIR$/clientdessin/clientdessin/MaWinsock.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-dea192236c274adf14f1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-07T19-31-24-0340.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +60,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="maquette_prof" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="maquette_prof" TARGET_NAME="maquette_prof" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="maquette_prof" RUN_TARGET_NAME="maquette_prof">
@@ -89,7 +80,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644258394829</updated>
       <workItem from="1644258396230" duration="24000" />
-      <workItem from="1644261835896" duration="536000" />
+      <workItem from="1644261835896" duration="655000" />
+      <workItem from="1644842722086" duration="655000" />
     </task>
     <servers />
   </component>

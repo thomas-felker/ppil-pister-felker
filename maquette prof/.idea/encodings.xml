@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/clientdessin/clientdessin/ClientDessin.cpp" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/clientdessin/clientdessin/MaWinsock.cpp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/clientdessin/clientdessin/TestClientDessin1.cpp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/clientdessin/clientdessin/TestClientDessin2.cpp" charset="windows-1252" />
   </component>
 </project>

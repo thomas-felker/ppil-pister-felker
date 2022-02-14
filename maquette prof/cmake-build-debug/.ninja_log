@@ -3,12 +3,10 @@
 190	4719	6659651065540495	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/Erreur.cpp.obj	10ed0a8b6cf7da24
 4730	13672	6659651160146390	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/TestClientDessin1.cpp.obj	49ef1726d8bd0711
 21	11109	6659651133081866	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/Croix.cpp.obj	9bf36896844c62a2
-136	11292	6659651133081866	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/MaWinsock.cpp.obj	d6f1ef57abde949d
+15	2785	6659654871296563	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/MaWinsock.cpp.obj	d6f1ef57abde949d
 333	11570	6659651138138982	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/Forme.cpp.obj	6cd2c96c259b3361
-10	5640	6659653401598100	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/ClientDessin.cpp.obj	27a1daf045b55d67
+6	2854	6659654871996162	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/ClientDessin.cpp.obj	27a1daf045b55d67
 496	11603	6659651138698655	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/Rond.cpp.obj	4ac6a8510260427d
 11294	15280	6659651176564249	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/TestClientDessin2.cpp.obj	6e1dff6eedfd3626
-5	486	6659654842445873	build.ninja	699f7635973833cb
-15	2785	6659654871296563	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/MaWinsock.cpp.obj	d6f1ef57abde949d
-6	2854	6659654871996162	CMakeFiles/maquette_prof.dir/clientdessin/clientdessin/ClientDessin.cpp.obj	27a1daf045b55d67
+5	486	6665459318584752	build.ninja	699f7635973833cb
 2855	3231	6659654875584097	maquette_prof.exe	e88c8bb292da3233
