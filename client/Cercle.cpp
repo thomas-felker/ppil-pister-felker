@@ -1,12 +1,12 @@
 #include "Cercle.h"
 
-Cercle::Cercle(const int margeHaut, const int margeGauche, const string &couleur, double rayon)
+Cercle::Cercle(const string &couleur, const int margeHaut, const int margeGauche, double rayon)
         : Forme("Cercle", margeHaut, margeGauche, couleur) {
     largeur_ = rayon;
     hauteur_ = rayon;
 }
 
-Cercle::Cercle(const int margeHaut, const int margeGauche, const string &couleur, double largeur,
+Cercle::Cercle(const string &couleur, const int margeHaut, const int margeGauche, double largeur,
                double hauteur) : Forme("Cercle", margeHaut, margeGauche, couleur), largeur_(largeur), hauteur_(hauteur) {}
 
 Cercle::~Cercle() {}
@@ -41,7 +41,7 @@ Cercle::operator string() {
 
 ostringstream Cercle::getQuery() {
     ostringstream oss;
-    oss << getNom() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getCouleur() << ", " << getLargeur() << ", " << getHauteur() << "\r\n";
+    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getLargeur() << ", " << getHauteur() << "\r\n";
     string query = oss.str();
     return oss;
 }

@@ -23,6 +23,7 @@
 #include "Erreur.h"
 #include "ClientDessin.h"
 #include "Cercle.h"
+#include "Segment.h"
 
 #pragma comment(lib, "ws2_32.lib")
 
@@ -64,8 +65,13 @@ int main()
         hauteur = 70;
 
         // clientDessin.remplitEllipse( margeGauche, margeHaut, largeur, hauteur);
-        Cercle * cercle = new Cercle(margeHaut, margeGauche, "blue", largeur, hauteur);
-        ostringstream oss = cercle->getQuery();
+        //Cercle * cercle = new Cercle("red", margeHaut, margeGauche, largeur, hauteur);
+        //ostringstream oss = cercle->getQuery();
+        Vecteur2D * depart = new Vecteur2D(10,10);
+        Vecteur2D *  arrivee = new Vecteur2D(40,40);
+
+        Segment * segment = new Segment("red", depart, arrivee);
+        ostringstream oss = segment->getQuery();
         int r = send( clientDessin.getSock(), oss.str().c_str(), oss.str().length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
         if (r == SOCKET_ERROR)

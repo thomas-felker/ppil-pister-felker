@@ -10,8 +10,8 @@ private:
     double largeur_, hauteur_;
 
 public:
-    Cercle(const int margeHaut, const int margeGauche, const string &couleur, double rayon);
-    Cercle(const int margeHaut, const int margeGauche, const string &couleur, double largeur,
+    Cercle(const string &couleur, const int margeHaut, const int margeGauche, double rayon);
+    Cercle(const string &couleur, const int margeHaut, const int margeGauche, double largeur,
            double hauteur);
 
     virtual ~Cercle();
