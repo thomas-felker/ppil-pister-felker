@@ -22,6 +22,7 @@
 #include <string>
 #include "Erreur.h"
 #include "ClientDessin.h"
+#include "Cercle.h"
 
 #pragma comment(lib, "ws2_32.lib")
 
@@ -36,33 +37,41 @@ int main()
 
         string titre = "Cadre";
 
-        int bordGauche = 300;
-        int bordHaut = 400;
+        int margeGauche = 600;
+        int margeHaut = 100;
         int largeur = 200;
         int hauteur = 200;
 
-        clientDessin.ouvreFenetreGraphique( titre, bordGauche, bordHaut, largeur, hauteur);
+        clientDessin.ouvreFenetreGraphique( titre, margeGauche, margeHaut, largeur, hauteur);
 
         int x1 = 180;
         int y1 = 40;
         int x2 = 40;
         int y2 = 180;
 
-        clientDessin.traceSegment( x1, y1, x2, y2);
+        // clientDessin.traceSegment( x1, y1, x2, y2);
 
-        bordGauche = 300;
-        bordHaut = 400;
+        margeGauche = 300;
+        margeHaut = 400;
         largeur = 200;
         hauteur = 200;
 
-        clientDessin.ouvreFenetreGraphique( titre, bordGauche, bordHaut, largeur, hauteur);
+        // clientDessin.ouvreFenetreGraphique( titre, margeGauche, margeHaut, largeur, hauteur);
 
-        bordGauche = 40;
-        bordHaut = 100;
+        margeGauche = 80;
+        margeHaut = 40;
         largeur = 70;
         hauteur = 70;
 
-        clientDessin.remplitEllipse( bordGauche, bordHaut, largeur, hauteur);
+        // clientDessin.remplitEllipse( margeGauche, margeHaut, largeur, hauteur);
+        Cercle * cercle = new Cercle(margeHaut, margeGauche, "blue", largeur, hauteur);
+        ostringstream oss = cercle->getQuery();
+        int r = send( clientDessin.getSock(), oss.str().c_str(), oss.str().length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
+
+        if (r == SOCKET_ERROR)
+            throw Erreur("échec de l'envoi de la requête de tracé de segment");
+
+        cout << "requête envoyée : " << oss.str() << endl;
     }
     catch (Erreur e)
     {

@@ -30,6 +30,14 @@ public:
 
     void ouvreFenetreGraphique(const string& titre, const int bordGauche, const int bordHaut, const int largeur, const int hauteur);
 
+    SOCKET getSock() const;
+
+    void setSock(SOCKET sock);
+
+    const SOCKADDR_IN &getSockaddr() const;
+
+    void setSockaddr(const SOCKADDR_IN &sockaddr);
+
     /**
         envoie sur une seule ligne les 5 paramètres au serveur.
      * Les 5 paramètres drawLine, ... , y2 sont au préalable encodés en 1 seule String. Les paramètres sont séparés par ", "

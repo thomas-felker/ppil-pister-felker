@@ -153,3 +153,19 @@ void ClientDessin::remplitEllipse( const int bordGauche, const int bordHaut, con
 
     cout << "requête de tracé de segment envoyée" << endl;
 }
+
+SOCKET ClientDessin::getSock() const {
+    return sock;
+}
+
+void ClientDessin::setSock(SOCKET sock) {
+    ClientDessin::sock = sock;
+}
+
+const SOCKADDR_IN &ClientDessin::getSockaddr() const {
+    return sockaddr;
+}
+
+void ClientDessin::setSockaddr(const SOCKADDR_IN &sockaddr) {
+    ClientDessin::sockaddr = sockaddr;
+}
