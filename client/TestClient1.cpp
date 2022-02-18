@@ -67,11 +67,20 @@ int main()
         // clientDessin.remplitEllipse( margeGauche, margeHaut, largeur, hauteur);
         //Cercle * cercle = new Cercle("red", margeHaut, margeGauche, largeur, hauteur);
         //ostringstream oss = cercle->getQuery();
+        Vecteur2D * poscercle = new Vecteur2D(100, 100);
+        Vecteur2D * dimcercle = new Vecteur2D(30,30);
+        Cercle * cercle = new Cercle("blue", poscercle, dimcercle);
+        ostringstream oss1 = cercle->getQuery();
+
         Vecteur2D * depart = new Vecteur2D(10,10);
         Vecteur2D *  arrivee = new Vecteur2D(40,40);
 
         Segment * segment = new Segment("red", depart, arrivee);
-        ostringstream oss = segment->getQuery();
+        ostringstream oss2 = segment->getQuery();
+
+        ostringstream oss;
+        oss << oss1.str() << "/" <<  oss2.str() << "\r\n";
+
         int r = send( clientDessin.getSock(), oss.str().c_str(), oss.str().length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
         if (r == SOCKET_ERROR)

@@ -55,7 +55,13 @@ public class SessionDessin extends Thread {
                         forme = new Triangle(forme, cadre);
                         forme = new Polygone(forme, cadre);
                     } else {
-                        forme.traiter(query);
+                        String[] argstmp = query.split("/");
+                        for (String arg:
+                             argstmp) {
+                            System.out.println(arg);
+                            forme.traiter(arg.replaceAll("/", "").replaceAll(" ", ""));
+                        }
+                        // forme.traiter(query);
                     }
                 }
             }

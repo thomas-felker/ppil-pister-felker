@@ -50,10 +50,8 @@ ostream &operator<<(ostream &os, const Segment &segment) {
 
 ostringstream Segment::getQuery() {
     ostringstream oss;
-    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getX2() << ", " << getY2() << "\r\n";
+    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getX2() << ", " << getY2();
     return oss;
 }
 
-Segment::Segment(const string &couleur, Vecteur2D *marges, Vecteur2D *arrivee) : Forme("Segment", couleur,
-                                                                                                          marges),
-                                                                                                    arrivee_(arrivee) {}
+Segment::Segment(const string &couleur, Vecteur2D *marges, Vecteur2D *arrivee) : Forme("Segment", couleur, marges),arrivee_(arrivee) {}

@@ -1,34 +1,62 @@
 #include "Cercle.h"
 
-Cercle::Cercle(const string &couleur, const int margeHaut, const int margeGauche, double rayon)
-        : Forme("Cercle", margeHaut, margeGauche, couleur) {
-    largeur_ = rayon;
-    hauteur_ = rayon;
+Cercle::Cercle(const string &couleur, Vecteur2D *marges, Vecteur2D *dimensions) : Forme("Cercle", couleur,marges),dimensions_(dimensions) {}
+
+Cercle::~Cercle() {
+
 }
 
-Cercle::Cercle(const string &couleur, const int margeHaut, const int margeGauche, double largeur,
-               double hauteur) : Forme("Cercle", margeHaut, margeGauche, couleur), largeur_(largeur), hauteur_(hauteur) {}
-
-Cercle::~Cercle() {}
-
-double Cercle::getLargeur() const {
-    return largeur_;
+Vecteur2D *Cercle::getDimensions() const {
+    return dimensions_;
 }
 
-void Cercle::setLargeur(double largeur) {
-    largeur_ = largeur;
+void Cercle::setDimensions(Vecteur2D *dimensions) {
+    dimensions_ = dimensions;
 }
 
-double Cercle::getHauteur() const {
-    return hauteur_;
+bool Cercle::operator==(const Cercle &rhs) const {
+    return static_cast<const Forme &>(*this) == static_cast<const Forme &>(rhs) &&
+           dimensions_ == rhs.dimensions_;
 }
 
-void Cercle::setHauteur(double hauteur) {
-    hauteur_ = hauteur;
+bool Cercle::operator!=(const Cercle &rhs) const {
+    return !(rhs == *this);
+}
+
+bool Cercle::operator<(const Cercle &rhs) const {
+    if (static_cast<const Forme &>(*this) < static_cast<const Forme &>(rhs))
+        return true;
+    if (static_cast<const Forme &>(rhs) < static_cast<const Forme &>(*this))
+        return false;
+    return dimensions_ < rhs.dimensions_;
+}
+
+bool Cercle::operator>(const Cercle &rhs) const {
+    return rhs < *this;
+}
+
+bool Cercle::operator<=(const Cercle &rhs) const {
+    return !(rhs < *this);
+}
+
+bool Cercle::operator>=(const Cercle &rhs) const {
+    return !(*this < rhs);
+}
+
+ostream &operator<<(ostream &os, const Cercle &cercle) {
+    os << static_cast<const Forme &>(cercle) << " dimensions_: " << cercle.dimensions_;
+    return os;
+}
+
+ostringstream Cercle::getQuery() {
+    ostringstream oss;
+    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getLargeur() << ", " << getHauteur();
+    string query = oss.str();
+    return oss;
 }
 
 double Cercle::calculerAire() {
-    return getHauteur() * getLargeur() * M_PI;
+    return getLargeur() * getHauteur() * M_PI;
 }
 
 string Cercle::toString() {
@@ -38,12 +66,3 @@ string Cercle::toString() {
 Cercle::operator string() {
     return Forme::operator string();
 }
-
-ostringstream Cercle::getQuery() {
-    ostringstream oss;
-    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getLargeur() << ", " << getHauteur() << "\r\n";
-    string query = oss.str();
-    return oss;
-}
-
-
