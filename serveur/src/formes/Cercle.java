@@ -7,20 +7,19 @@ import java.lang.reflect.Field;
 
 public class Cercle extends Forme {
     private Vecteur2D rayon;
-    private int x1, x2, y1, y2;
-    private String name;
     private Couleur color;
     private String args[];
 
 
     public Cercle(Forme suivant, CadreDessin cadre) {
         super(suivant, cadre);
+        rayon = new Vecteur2D(0,0);
     }
 
     @Override
     public void dessiner(String query) throws Exception {
-        cadre.graphics.setColor(color.getColor());
-        cadre.graphics.fillOval(x1,y1,x2,y2);
+        cadre.graphics.setColor(this.getCouleur().getColor());
+        cadre.graphics.fillOval(getPosition().getX(), getPosition().getY(), rayon.getX(), rayon.getY());
 
         cadre.getBufferStrategy().show();
     }
@@ -31,11 +30,9 @@ public class Cercle extends Forme {
         if (!args[0].equalsIgnoreCase("Cercle")) {
             return false;
         } else {
-            color = new Couleur(args[1]);
-            x1 = Integer.parseInt(args[2].trim());
-            y1 = Integer.parseInt(args[3].trim());
-            x2 = Integer.parseInt(args[4].trim());
-            y2 = Integer.parseInt(args[5].trim());
+            this.getCouleur().setName(args[1]);
+            this.getPosition().setXY(Integer.parseInt(args[2].trim()), Integer.parseInt(args[3].trim()));
+            rayon.setXY(Integer.parseInt(args[4].trim()), Integer.parseInt(args[5].trim()));
 
             return true;
         }

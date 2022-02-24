@@ -43,11 +43,11 @@ public class SessionDessin extends Thread {
             Forme forme = null;
             while (true) {
                 String query = this.fluxEntrant.readLine();
-                if (query != null) {
-                    System.out.println("Requete reçue : " + query);
+                if (query != null && (!(query.replaceAll(" ", "").equalsIgnoreCase("")))) {
                     String[] args = query.split(",");
 
                     if (args[0].equalsIgnoreCase("Cadre")) {
+                        System.out.println("Requete reçue : " + query);
                         CadreDessin cadre = createCadre(query);
 
                         forme = new Segment(null, cadre);
@@ -58,8 +58,11 @@ public class SessionDessin extends Thread {
                         String[] argstmp = query.split("/");
                         for (String arg:
                              argstmp) {
-                            System.out.println(arg);
-                            forme.traiter(arg.replaceAll("/", "").replaceAll(" ", ""));
+                            String test[] = arg.split(":");
+                            if ((test[0].equalsIgnoreCase("Forme "))) {
+                                System.out.println("Requete reçue : " + test[1]);
+                                forme.traiter(test[1].replaceAll("/", "").replaceAll(" ", ""));
+                            }
                         }
                         // forme.traiter(query);
                     }

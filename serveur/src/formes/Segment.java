@@ -3,21 +3,20 @@ package formes;
 import cadre.CadreDessin;
 
 public class Segment extends Forme {
-    private Vecteur2D vecteur;
-    private int x1, x2, y1, y2;
-    private String name;
+    private Vecteur2D arrivee;
     private Couleur color;
     private String args[];
 
     public Segment(Forme suivant, CadreDessin cadre) {
         super(suivant, cadre);
+        arrivee = new Vecteur2D(0,0);
     }
 
     @Override
     public void dessiner(String query) throws Exception {
         args = query.split(",");
-        cadre.graphics.setColor(color.getColor());
-        cadre.graphics.drawLine(x1,y1,x2,y2);
+        cadre.graphics.setColor(this.getCouleur().getColor());
+        cadre.graphics.drawLine(getPosition().getX(), getPosition().getY(), arrivee.getX(),arrivee.getY());
 
         cadre.getBufferStrategy().show();
     }
@@ -29,12 +28,9 @@ public class Segment extends Forme {
         if (!args[0].equalsIgnoreCase("Segment")) {
             return false;
         } else {
-            color = new Couleur(args[1]);
-            x1 = Integer.parseInt(args[2].trim());
-            y1 = Integer.parseInt(args[3].trim());
-            x2 = Integer.parseInt(args[4].trim());
-            y2 = Integer.parseInt(args[5].trim());
-
+            this.getCouleur().setName(args[1]);
+            this.getPosition().setXY(Integer.parseInt(args[2].trim()), Integer.parseInt(args[3].trim()));
+            arrivee.setXY(Integer.parseInt(args[4].trim()), Integer.parseInt(args[5].trim()));
             return true;
         }
     }

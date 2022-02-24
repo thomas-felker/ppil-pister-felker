@@ -40,8 +40,8 @@ int main()
 
         int margeGauche = 600;
         int margeHaut = 100;
-        int largeur = 200;
-        int hauteur = 200;
+        int largeur = 500;
+        int hauteur = 500;
 
         clientDessin.ouvreFenetreGraphique( titre, margeGauche, margeHaut, largeur, hauteur);
 
@@ -69,7 +69,7 @@ int main()
         //ostringstream oss = cercle->getQuery();
         Vecteur2D * poscercle = new Vecteur2D(100, 100);
         Vecteur2D * dimcercle = new Vecteur2D(30,30);
-        Cercle * cercle = new Cercle("blue", poscercle, dimcercle);
+        Cercle * cercle = new Cercle("green", poscercle, dimcercle);
         ostringstream oss1 = cercle->getQuery();
 
         Vecteur2D * depart = new Vecteur2D(10,10);
@@ -81,12 +81,15 @@ int main()
         ostringstream oss;
         oss << oss1.str() << "/" <<  oss2.str() << "\r\n";
 
-        int r = send( clientDessin.getSock(), oss.str().c_str(), oss.str().length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
+        ostringstream oss3;
+        oss3 << "Forme :Triangle, red, 40, 0, 100, 0, 0, 100 \r \n";
+
+        int r = send( clientDessin.getSock(), oss3.str().c_str(), oss.str().length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
         if (r == SOCKET_ERROR)
             throw Erreur("échec de l'envoi de la requête de tracé de segment");
 
-        cout << "requête envoyée : " << oss.str() << endl;
+        cout << "requête envoyée : " << oss3.str() << endl;
     }
     catch (Erreur e)
     {

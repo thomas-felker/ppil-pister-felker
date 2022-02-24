@@ -5,10 +5,17 @@ import java.awt.*;
 public class Couleur {
     private String name;
 
+    public Couleur() {
+    }
+
     public Couleur(String couleur) { name = couleur; }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Color getColor() {
