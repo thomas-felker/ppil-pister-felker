@@ -83,7 +83,7 @@ ClientDessin::~ClientDessin()
     r = closesocket(sock);                          // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
     if (r) throw Erreur("La fermeture du socket a échoué");
 
-    cout << "arrêt normal du client" << endl;
+    cout << "Arret normal du client" << endl;
 }
 
 // il y a une GROSSE redondance de code (ou autrement dit un GROS copié-collé pourri) sur les 3 méthodes suivantes : elle doit être éliminée !!!!!!!
@@ -103,9 +103,9 @@ void ClientDessin::ouvreFenetreGraphique(const string & titre, const int bordGau
     int r = send( sock, requete.c_str(), requete.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
     if (r == SOCKET_ERROR)
-        throw Erreur("échec de l'envoi de la requête d'ouverture de fenêtre graphique");
+        throw Erreur("échec de l'envoi de la requete d'ouverture de fenêtre graphique");
 
-    cout << "requête d'ouverture de fenêtre graphique envoyée" << endl;
+    cout << "Requete d'ouverture de fenetre graphique envoyee" << endl;
 }
 
 SOCKET ClientDessin::getSock() const {

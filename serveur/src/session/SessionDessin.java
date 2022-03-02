@@ -59,7 +59,7 @@ public class SessionDessin extends Thread {
                         for (String arg:
                              argstmp) {
                             String test[] = arg.split(":");
-                            if ((test[0].equalsIgnoreCase("Forme "))) {
+                            if ((test[0].replaceAll(" ", "").equalsIgnoreCase("Forme"))) {
                                 System.out.println("Requete reçue : " + test[1]);
                                 forme.traiter(test[1].replaceAll("/", "").replaceAll(" ", ""));
                             }
