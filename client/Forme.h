@@ -2,93 +2,58 @@
 
 #include <string>
 #include <cstring>
+#include <iostream>
 #include <sstream>
 #include <ostream>
+#include <math.h>
 #include "Vecteur2D.h"
+#include "LibrairieGraphique.h"
+// class LibrairieGraphique;
 
 using namespace std;
 
 class Forme {
 private :
-    string nom_, couleur_;
-    Vecteur2D * marges_;
+    string couleur_;
+    Vecteur2D * pos_;
 
 public :
-    Forme(const string &nom, const string &couleur, Vecteur2D *marges) : nom_(nom), couleur_(couleur),
-                                                                         marges_(marges) {}
-
+    Forme(const string &couleur, Vecteur2D * pos) :
+        couleur_(couleur), pos_(pos) {}
     virtual ~Forme(){};
-
-    const string &getNom() const {
-        return nom_;
-    }
-
-    void setNom(const string &nom) {
-        nom_ = nom;
-    }
 
     const string &getCouleur() const {
         return couleur_;
     }
-
     void setCouleur(const string &couleur) {
         couleur_ = couleur;
     }
 
-    int getMargeHaut() const {
-        return marges_->getX();
+    Vecteur2D *getPos() const {
+        return pos_;
     }
 
-    int getMargeGauche() const {
-        return marges_->getY();
+    void setPos(Vecteur2D *pos) {
+        pos_ = pos;
     }
 
-    virtual ostringstream getQuery() = 0;
+    double getMargeHaut() const {
+        return pos_->getY();
+    }
+    double getMargeGauche() const {
+        return pos_->getX();
+    }
+
+    virtual string getQuery() = 0;
     virtual double calculerAire() = 0;
+    virtual void dessiner(LibrairieGraphique * Librairie) = 0;
+
+    virtual void translation(Vecteur2D) = 0;
 
     virtual string toString() {
-        string res = "Forme { " + nom_ + ", margeHaut : " + to_string(getMargeHaut());
-        res = res + ", margeGauche : " + to_string(getMargeGauche()) + ", " + couleur_ + " }";
-        return res;
+        return "";
     }
-    virtual explicit operator string() { return toString(); }
-
-    bool operator==(const Forme &rhs) const {
-        return nom_ == rhs.nom_ &&
-               couleur_ == rhs.couleur_ &&
-               marges_ == rhs.marges_;
-    }
-
-    bool operator!=(const Forme &rhs) const {
-        return !(rhs == *this);
-    }
-
-    bool operator<(const Forme &rhs) const {
-        if (nom_ < rhs.nom_)
-            return true;
-        if (rhs.nom_ < nom_)
-            return false;
-        if (couleur_ < rhs.couleur_)
-            return true;
-        if (rhs.couleur_ < couleur_)
-            return false;
-        return marges_ < rhs.marges_;
-    }
-
-    bool operator>(const Forme &rhs) const {
-        return rhs < *this;
-    }
-
-    bool operator<=(const Forme &rhs) const {
-        return !(rhs < *this);
-    }
-
-    bool operator>=(const Forme &rhs) const {
-        return !(*this < rhs);
-    }
-
-    friend ostream &operator<<(ostream &os, const Forme &forme) {
-        os << "nom_: " << forme.nom_ << " couleur_: " << forme.couleur_ << " marges_: " << forme.marges_;
-        return os;
+    virtual explicit operator string() {
+        return "";
     }
 };

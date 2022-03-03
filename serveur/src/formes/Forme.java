@@ -8,6 +8,8 @@ public abstract class Forme {
     public CadreDessin cadre;
     private Vecteur2D position;
     private Couleur color;
+    public String args[];
+    public String test[];
 
     public Forme(Forme suivant, CadreDessin cadre) {
         this.suivant = suivant;
@@ -19,7 +21,6 @@ public abstract class Forme {
     public Vecteur2D getPosition() {
         return position;
     }
-
     public void setPosition(Vecteur2D position) {
         this.position = position;
     }
@@ -27,7 +28,6 @@ public abstract class Forme {
     public Couleur getCouleur() {
         return color;
     }
-
     public void setColor(Couleur color) {
         this.color = color;
     }
@@ -43,10 +43,8 @@ public abstract class Forme {
     }
 
     private Forme getSuivant() { return suivant; }
-
     private boolean aUnSuivant() { return suivant != null; }
 
     public abstract void dessiner(String query) throws Exception;
-
     public abstract boolean saitDessiner(String query);
 }

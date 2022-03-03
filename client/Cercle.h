@@ -1,40 +1,29 @@
 #pragma once
 
 #include "Forme.h"
-#include <math.h>
 #include <ostream>
+
 
 using namespace std;
 
 class Cercle : public Forme {
 private:
-    Vecteur2D * dimensions_;
-
+    double rayon;
 public:
-    Cercle(const string &couleur, Vecteur2D *marges, Vecteur2D *dimensions);
+    Cercle(const string &couleur, Vecteur2D *pos, double rayon);
     virtual ~Cercle();
 
-    Vecteur2D *getDimensions() const;
-    void setDimensions(Vecteur2D *dimensions);
+    double getRayon() const;
 
-    double getLargeur() const {
-        return dimensions_->getX();
-    }
+    string getQuery() override;
 
-    double getHauteur() const {
-        return dimensions_->getY();
-    }
-
-    bool operator==(const Cercle &rhs) const;
-    bool operator!=(const Cercle &rhs) const;
-    bool operator<(const Cercle &rhs) const;
-    bool operator>(const Cercle &rhs) const;
-    bool operator<=(const Cercle &rhs) const;
-    bool operator>=(const Cercle &rhs) const;
-    friend ostream &operator<<(ostream &os, const Cercle &cercle);
-
-    ostringstream getQuery() override;
     double calculerAire() override;
+
+    void dessiner(LibrairieGraphique *Librairie) override;
+
     string toString() override;
+
+    void translation(Vecteur2D d) override;
+
     explicit operator string() override;
 };

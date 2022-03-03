@@ -40,17 +40,11 @@ public class Vecteur2D {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(x, y);
-    }
-
-    @Override
     public String toString() {
         return "Vecteur2D{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';
     }
-
 
 }

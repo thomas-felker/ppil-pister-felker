@@ -33,9 +33,7 @@ ClientDessin::ClientDessin( const string & adresseServeurDessin, const int portS
 {
     MaWinsock::getInstance();	// initialisation de la DLL : effectuée une seule fois
 
-
 //---------------------- création socket -------------------------------------------------
-
     int r;
 
     int familleAdresses = AF_INET;         // IPv4
@@ -48,11 +46,11 @@ ClientDessin::ClientDessin( const string & adresseServeurDessin, const int portS
     if (sock == INVALID_SOCKET)
     {
         ostringstream oss;
-        oss << "la création du socket a échoué : code d'erreur = " << WSAGetLastError() << endl;	// pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock
+        oss << "la creation du socket a echoue : code d'erreur = " << WSAGetLastError() << endl;	// pour les valeurs renvoyées par WSAGetLastError() : cf. doc réf winsock
         throw Erreur(oss.str().c_str());
     }
 
-    cout << "socket de dessin créé" << endl;
+    cout << "Socket de dessin cree" << endl;
 
 //------------------------------ création du représentant du serveur ----------------------------------------
 
@@ -66,9 +64,9 @@ ClientDessin::ClientDessin( const string & adresseServeurDessin, const int portS
     // Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
 
     if (r == SOCKET_ERROR)
-        throw Erreur("La connexion au serveur de dessin a échoué");
+        throw Erreur("La connexion au serveur de dessin a echoue");
 
-    cout << "connexion au serveur de dessin réussie" << endl;
+    cout << "Connexion au serveur de dessin reussie" << endl;
 }
 
 ClientDessin::~ClientDessin()
@@ -77,17 +75,15 @@ ClientDessin::~ClientDessin()
     // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
 
     if (r == SOCKET_ERROR)
-        throw Erreur("la coupure de connexion a échoué");
+        throw Erreur("La coupure de connexion a echoue");
 
 
     r = closesocket(sock);                          // renvoie une valeur non nulle en cas d'échec. Le code d'erreur peut être obtenu par un appel à WSAGetLastError()
-    if (r) throw Erreur("La fermeture du socket a échoué");
+    if (r) throw Erreur("La fermeture du socket a echoue");
 
     cout << "Arret normal du client" << endl;
 }
 
-// il y a une GROSSE redondance de code (ou autrement dit un GROS copié-collé pourri) sur les 3 méthodes suivantes : elle doit être éliminée !!!!!!!
-// cf. classe JAVA ClientDessin - méthode encoder()
 
 void ClientDessin::ouvreFenetreGraphique(const string & titre, const int bordGauche, const int bordHaut, const int largeur, const int hauteur)
 {
@@ -98,7 +94,7 @@ void ClientDessin::ouvreFenetreGraphique(const string & titre, const int bordGau
     string requete = oss.str();
 
 
-//int l = strlen(requete);
+    //int l = strlen(requete);
 
     int r = send( sock, requete.c_str(), requete.length(), 0);             //------------------ envoi de la requête au serveur -------------------------------
 
@@ -111,7 +107,6 @@ void ClientDessin::ouvreFenetreGraphique(const string & titre, const int bordGau
 SOCKET ClientDessin::getSock() const {
     return sock;
 }
-
 void ClientDessin::setSock(SOCKET sock) {
     ClientDessin::sock = sock;
 }
@@ -119,7 +114,29 @@ void ClientDessin::setSock(SOCKET sock) {
 const SOCKADDR_IN &ClientDessin::getSockaddr() const {
     return sockaddr;
 }
-
 void ClientDessin::setSockaddr(const SOCKADDR_IN &sockaddr) {
     ClientDessin::sockaddr = sockaddr;
 }
+
+void ClientDessin::envoyer(ostringstream query) {
+    string requete = query.str();
+    int r = send(sock, requete.c_str(), requete.length(), 0);
+    if (r == SOCKET_ERROR)
+        throw Erreur("Echec de l'envoi de la requete");
+}
+
+void ClientDessin::envoyer(string query) {
+    int r = send(sock, query.c_str(), query.length(), 0);
+    if (r == SOCKET_ERROR)
+        throw Erreur("Echec de l'envoi de la requete");
+    cout << "Requete envoyee : " << query.c_str() << endl;
+}
+
+void ClientDessin::initCadre(Vecteur2D * marge, Vecteur2D * dim) {
+    ostringstream oss;
+    oss << "cadre:Frame," << marge->getX() << "," << marge->getY() << "," << dim->getX()
+    << "," << dim->getY() << "\r\n";
+    int r = send(sock, oss.str().c_str(), oss.str().length(), 0);
+    if (r == SOCKET_ERROR)
+        throw Erreur("échec de l'envoi de la requête");
+};

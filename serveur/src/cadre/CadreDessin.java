@@ -15,7 +15,7 @@ import java.awt.Dimension;
  * */
 public class CadreDessin extends Frame
 {
-    public Graphics graphics;      // pour dessiner sur this
+    public Graphics graphics;
 
     /**
      * @param titre : titre de la fenêtre
@@ -57,10 +57,10 @@ public class CadreDessin extends Frame
 
         this.setIgnoreRepaint(true);
 
-        int nombreBuffers = 1;
-        this.createBufferStrategy(nombreBuffers);
-        Thread.sleep(50);   // il faut attendre un minimum de 50 ms pour que le buffer soit opérationnel
-        this.graphics = this.getBufferStrategy().getDrawGraphics();
+        int numBuffers = 2;
+        this.createBufferStrategy(numBuffers);
+        Thread.sleep(150);   // il faut attendre un minimum de 50 ms pour que le buffer soit opérationnel
+        graphics = this.getBufferStrategy().getDrawGraphics();
     }
 
 }

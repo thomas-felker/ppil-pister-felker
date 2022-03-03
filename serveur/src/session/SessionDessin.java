@@ -12,6 +12,7 @@ import java.net.SocketException;
 public class SessionDessin extends Thread {
     Socket socket;
     BufferedReader fluxEntrant;
+    CadreDessin cadre_;
 
     /** Crée la session de dessin avec le client distant connecté sur socket
      * @throws IOException
@@ -21,50 +22,46 @@ public class SessionDessin extends Thread {
         this.fluxEntrant = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
     }
 
-    public CadreDessin createCadre(String query) throws IOException, InterruptedException {
-        String arguments[] = query.split(",");
+    public CadreDessin initCadre(String query) throws IOException, InterruptedException {
+        String requete[] = query.split(":");
 
-        String titre;
-        int Ox, Oy, largeur, hauteur;
-
-        titre = arguments[0].trim();
-        Ox = Integer.parseInt(arguments[1].trim());
-        Oy = Integer.parseInt(arguments[2].trim());
-        largeur = Integer.parseInt(arguments[3].trim());
-        hauteur = Integer.parseInt(arguments[4].trim());
+        String [] arguments = requete[1].split(",");
+        String titre = arguments[0].trim();
+        int Ox = Integer.parseInt(arguments[1].trim());
+        int Oy = Integer.parseInt(arguments[2].trim());
+        int largeur = Integer.parseInt(arguments[3].trim());
+        int hauteur = Integer.parseInt(arguments[4].trim());
 
         CadreDessin cadre = new CadreDessin(titre,Ox,Oy,largeur,hauteur);
         return cadre;
     }
 
+    // -- Définition du protocole
     @Override
     public void run() {
         try {
+            // -- À laisser ici
             Forme forme = null;
+
             while (true) {
                 String query = this.fluxEntrant.readLine();
                 if (query != null && (!(query.replaceAll(" ", "").equalsIgnoreCase("")))) {
-                    String[] args = query.split(",");
-
+                    String[] args = query.split(":");
                     if (args[0].equalsIgnoreCase("Cadre")) {
                         System.out.println("Requete reçue : " + query);
-                        CadreDessin cadre = createCadre(query);
-
-                        forme = new Segment(null, cadre);
-                        forme = new Cercle(forme, cadre);
-                        forme = new Triangle(forme, cadre);
-                        forme = new Polygone(forme, cadre);
+                        CadreDessin cadre = initCadre(query);
+                        cadre_ = cadre;
                     } else {
-                        String[] argstmp = query.split("/");
-                        for (String arg:
-                             argstmp) {
-                            String test[] = arg.split(":");
-                            if ((test[0].replaceAll(" ", "").equalsIgnoreCase("Forme"))) {
-                                System.out.println("Requete reçue : " + test[1]);
-                                forme.traiter(test[1].replaceAll("/", "").replaceAll(" ", ""));
-                            }
+                        String[] querys = query.split("/");
+                        for (String requete:
+                                querys) {
+                            System.out.println("Requete reçue : " + requete);
+                            forme = new Segment(null, cadre_);
+                            forme = new Cercle(forme, cadre_);
+                            forme = new Triangle(forme, cadre_);
+                            forme = new Polygone(forme, cadre_);
+                            forme.traiter(requete.replaceAll("/", "").replaceAll(" ", ""));
                         }
-                        // forme.traiter(query);
                     }
                 }
             }

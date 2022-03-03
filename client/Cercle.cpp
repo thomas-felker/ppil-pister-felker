@@ -1,68 +1,44 @@
 #include "Cercle.h"
 
-Cercle::Cercle(const string &couleur, Vecteur2D *marges, Vecteur2D *dimensions) : Forme("Cercle", couleur,marges),dimensions_(dimensions) {}
-
+Cercle::Cercle(const string &couleur, Vecteur2D *pos, double rayon) :
+    Forme(couleur, pos), rayon(rayon) {}
 Cercle::~Cercle() {
 
 }
 
-Vecteur2D *Cercle::getDimensions() const {
-    return dimensions_;
+double Cercle::getRayon() const {
+    return rayon;
 }
 
-void Cercle::setDimensions(Vecteur2D *dimensions) {
-    dimensions_ = dimensions;
-}
-
-bool Cercle::operator==(const Cercle &rhs) const {
-    return static_cast<const Forme &>(*this) == static_cast<const Forme &>(rhs) &&
-           dimensions_ == rhs.dimensions_;
-}
-
-bool Cercle::operator!=(const Cercle &rhs) const {
-    return !(rhs == *this);
-}
-
-bool Cercle::operator<(const Cercle &rhs) const {
-    if (static_cast<const Forme &>(*this) < static_cast<const Forme &>(rhs))
-        return true;
-    if (static_cast<const Forme &>(rhs) < static_cast<const Forme &>(*this))
-        return false;
-    return dimensions_ < rhs.dimensions_;
-}
-
-bool Cercle::operator>(const Cercle &rhs) const {
-    return rhs < *this;
-}
-
-bool Cercle::operator<=(const Cercle &rhs) const {
-    return !(rhs < *this);
-}
-
-bool Cercle::operator>=(const Cercle &rhs) const {
-    return !(*this < rhs);
-}
-
-ostream &operator<<(ostream &os, const Cercle &cercle) {
-    os << static_cast<const Forme &>(cercle) << " dimensions_: " << cercle.dimensions_;
-    return os;
-}
-
-ostringstream Cercle::getQuery() {
-    ostringstream oss;
-    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getLargeur() << ", " << getHauteur();
-    string query = oss.str();
-    return oss;
+string Cercle::getQuery() {
+    return this->toString();
 }
 
 double Cercle::calculerAire() {
-    return getLargeur() * getHauteur() * M_PI;
+    return rayon * rayon * M_PI;
+}
+
+void Cercle::dessiner(LibrairieGraphique *Librairie) {
+    Librairie->dessinerCercle(this);
 }
 
 string Cercle::toString() {
-    return Forme::toString();
+    string res = "Cercle:" + this->getCouleur() + ","
+                 + to_string(int(this->getMargeGauche())) + ","
+                 + to_string(int(this->getMargeHaut())) + ","
+                 + to_string(int(rayon)) + "\r \n";
+    return res;
 }
 
 Cercle::operator string() {
-    return Forme::operator string();
+    string res = "Cercle:" + this->getCouleur() + ","
+                 + to_string(int(this->getMargeGauche())) + ","
+                 + to_string(int(this->getMargeHaut())) + ","
+                 + to_string(int(rayon)) + "\r \n";
+    return res;
 }
+
+void Cercle::translation(Vecteur2D d) {
+    setPos(new Vecteur2D((*getPos()) + d));
+}
+

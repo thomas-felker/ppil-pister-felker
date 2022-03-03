@@ -1,57 +1,47 @@
 #include "Segment.h"
 
-Segment::~Segment() {}
+Segment::Segment(const string &couleur, Vecteur2D *pos, Vecteur2D *arrivee) :
+        Forme(couleur, pos), arrivee_(arrivee) {}
 
-bool Segment::operator==(const Segment &rhs) const {
-    return static_cast<const Forme &>(*this) == static_cast<const Forme &>(rhs) &&
-           arrivee_ == rhs.arrivee_;
-}
+Segment::~Segment() = default;
 
-bool Segment::operator!=(const Segment &rhs) const {
-    return !(rhs == *this);
-}
-
-bool Segment::operator<(const Segment &rhs) const {
-    if (static_cast<const Forme &>(*this) < static_cast<const Forme &>(rhs))
-        return true;
-    if (static_cast<const Forme &>(rhs) < static_cast<const Forme &>(*this))
-        return false;
-    return arrivee_ < rhs.arrivee_;
-}
-
-bool Segment::operator>(const Segment &rhs) const {
-    return rhs < *this;
-}
-
-bool Segment::operator<=(const Segment &rhs) const {
-    return !(rhs < *this);
-}
-
-bool Segment::operator>=(const Segment &rhs) const {
-    return !(*this < rhs);
-}
-
-double Segment::calculerAire() {
-    return 0;
-}
-
-string Segment::toString() {
-    return Forme::toString();
+const Vecteur2D *Segment::getArrivee() const {
+    return arrivee_;
 }
 
 Segment::operator string() {
-    return Forme::operator string();
+    string res = "Segment:" + this->getCouleur() + ","
+                 + to_string(int(this->getMargeGauche())) + ","
+                 + to_string(int(this->getMargeHaut())) + ","
+                 + to_string(int(arrivee_->getX())) + ","
+                 + to_string(int(arrivee_->getY())) + "\r \n";
+    return res;
+}
+string Segment::toString() {
+    string res = "Segment:" + this->getCouleur() + ","
+            + to_string(int(this->getMargeGauche())) + ","
+            + to_string(int(this->getMargeHaut())) + ","
+            + to_string(int(arrivee_->getX())) + ","
+            + to_string(int(arrivee_->getY())) + "\r \n";
+    return res;
+}
+string Segment::getQuery() {
+    return this->toString();
 }
 
-ostream &operator<<(ostream &os, const Segment &segment) {
-    os << static_cast<const Forme &>(segment) << " arrivee_: " << segment.arrivee_;
-    return os;
+double Segment::calculerAire() {
+    Vecteur2D tmp = (*arrivee_) - (*getPos());
+    return sqrt(((tmp.getX() * tmp.getX()) + (tmp.getY() * tmp.getY())));
 }
 
-ostringstream Segment::getQuery() {
-    ostringstream oss;
-    oss << getNom() << ", " << getCouleur() << ", " << getMargeGauche() << ", " << getMargeHaut() << ", " << getX2() << ", " << getY2();
-    return oss;
+void Segment::dessiner(LibrairieGraphique *Librairie) {
+    Librairie->dessinerSegment(this);
 }
 
-Segment::Segment(const string &couleur, Vecteur2D *marges, Vecteur2D *arrivee) : Forme("Segment", couleur, marges),arrivee_(arrivee) {}
+void Segment::translation(Vecteur2D d) {
+    Vecteur2D pos = (*getPos());
+    pos = pos + d;
+    setPos(new Vecteur2D(pos));
+    Vecteur2D tmp = (*arrivee_);
+    this->arrivee_ = new Vecteur2D((*arrivee_) + d);
+}

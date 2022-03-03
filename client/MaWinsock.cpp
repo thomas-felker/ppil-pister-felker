@@ -21,14 +21,14 @@ MaWinsock::MaWinsock(void)
 
 /* en cas de succès, wsaData a été initialisée et l'appel a renvoyé la valeur 0 */
 
-    if (r) throw Erreur("L'initialisation a échoué");
+    if (r) throw Erreur("L'initialisation a echoue");
 
-    cout << "initialisation winsock effectuée"<<endl;
+    cout << "Initialisation Winsock effectuee"<<endl;
 }
 
 
 MaWinsock::~MaWinsock(void)
 {
     WSACleanup();
-    cout << "libération des ressources de la winsock effectuée"<<endl;
+    cout << "Liberation des ressources de la winsock effectuee"<<endl;
 }

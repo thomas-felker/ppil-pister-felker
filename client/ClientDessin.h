@@ -3,6 +3,8 @@
 #include <WinSock2.h>
 #include <string>
 #include <string.h>
+#include <sstream>
+#include "Vecteur2D.h"
 
 using namespace std;
 
@@ -38,4 +40,8 @@ public:
 
     void setSockaddr(const SOCKADDR_IN &sockaddr);
 
+    void envoyer(ostringstream query);
+    void envoyer(string query);
+
+    void initCadre(Vecteur2D * marge, Vecteur2D * dim);
 };
