@@ -126,10 +126,11 @@ void ClientDessin::envoyer(ostringstream query) {
 }
 
 void ClientDessin::envoyer(string query) {
-    int r = send(sock, query.c_str(), query.length(), 0);
+    string requete = query + "\r \n";
+    int r = send(sock, requete.c_str(), requete.length(), 0);
     if (r == SOCKET_ERROR)
         throw Erreur("Echec de l'envoi de la requete");
-    cout << "Requete envoyee : " << query.c_str() << endl;
+    cout << "Requete envoyee : " << query << endl;
 }
 
 void ClientDessin::initCadre(Vecteur2D * marge, Vecteur2D * dim) {

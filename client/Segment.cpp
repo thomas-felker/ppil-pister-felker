@@ -14,7 +14,7 @@ Segment::operator string() {
                  + to_string(int(this->getMargeGauche())) + ","
                  + to_string(int(this->getMargeHaut())) + ","
                  + to_string(int(arrivee_->getX())) + ","
-                 + to_string(int(arrivee_->getY())) + "\r \n";
+                 + to_string(int(arrivee_->getY()));
     return res;
 }
 string Segment::toString() {
@@ -22,7 +22,7 @@ string Segment::toString() {
             + to_string(int(this->getMargeGauche())) + ","
             + to_string(int(this->getMargeHaut())) + ","
             + to_string(int(arrivee_->getX())) + ","
-            + to_string(int(arrivee_->getY())) + "\r \n";
+            + to_string(int(arrivee_->getY()));
     return res;
 }
 string Segment::getQuery() {

@@ -31,7 +31,7 @@ string Triangle::toString() {
                  + to_string(int(pointA->getX())) + ","
                  + to_string(int(pointA->getY())) + ","
                  + to_string(int(pointB->getX())) + ","
-                 + to_string(int(pointB->getY())) +"\r \n";
+                 + to_string(int(pointB->getY()));
     return res;
 }
 
@@ -42,7 +42,7 @@ Triangle::operator string() {
                  + to_string(int(pointA->getX())) + ","
                  + to_string(int(pointA->getY())) + ","
                  + to_string(int(pointB->getX())) + ","
-                 + to_string(int(pointB->getY())) +"\r \n";
+                 + to_string(int(pointB->getY()));
     return res;
 }
 

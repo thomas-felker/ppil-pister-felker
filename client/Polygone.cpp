@@ -37,7 +37,7 @@ Polygone::operator string() {
         res = res + "," + to_string(int((*it)->getX())) + ","
               + to_string(int((*it)->getY()));
     }
-    return res +"\r \n";
+    return res;
 }
 
 void Polygone::translation(Vecteur2D d) {

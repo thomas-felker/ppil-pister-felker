@@ -34,7 +34,7 @@ Cercle::operator string() {
     string res = "Cercle:" + this->getCouleur() + ","
                  + to_string(int(this->getMargeGauche())) + ","
                  + to_string(int(this->getMargeHaut())) + ","
-                 + to_string(int(rayon)) + "\r \n";
+                 + to_string(int(rayon));
     return res;
 }
 
