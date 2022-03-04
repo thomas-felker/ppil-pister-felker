@@ -4,8 +4,6 @@
 
 #include "LibrairieGraphique.h"
 
-LibrairieGraphique::LibrairieGraphique() {}
+LibrairieGraphique::LibrairieGraphique() = default;
 
-LibrairieGraphique::~LibrairieGraphique() {
-
-}
+LibrairieGraphique::~LibrairieGraphique() = default;

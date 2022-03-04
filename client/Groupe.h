@@ -2,19 +2,19 @@
 
 #include "Forme.h"
 #include "LibrairieGraphique.h"
-#include <list>
+#include <vector>
 
-class Groupe {
+class Groupe : public Forme {
 private:
-    string couleur;
-    list<Forme *> formes;
+    vector<Forme *> formes;
 public:
-    Groupe(const string &couleur, const list<Forme *> &formes);
-    virtual ~Groupe();
+    Groupe(const string &couleur, const vector<Vecteur2D *> &points, const vector<Forme *> &formes);
+    ~Groupe() override;
 
-    void dessiner(LibrairieGraphique *Librairie);
+    void dessiner(LibrairieGraphique *Librairie) override;
 
-    void translation(Vecteur2D d);
+    void translation(Vecteur2D *d) override;
+    void translation(Vecteur2D d) override;
 
-    double calculerAire();
+    double calculerAire() override;
 };

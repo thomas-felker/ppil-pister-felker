@@ -13,6 +13,7 @@
 #include "Triangle.h"
 #include "Groupe.h"
 #include "awt.h"
+#include <vector>
 
 /*
  * Main.cpp
@@ -36,66 +37,90 @@ int main()
         ClientDessin clientDessin( adresseServeur, portServeurDessin);
 
         auto * marge = new Vecteur2D(100,100);
-        auto * dim = new Vecteur2D(300,300);
+        auto * dim = new Vecteur2D(900,900);
         clientDessin.initCadre(marge, dim);
 
         awt * lib = new awt(clientDessin);
 
+
         // ---------------------------------------------------
         // Polygone
-        auto * pos1 = new Vecteur2D(40,40);
-        auto * a1 = new Vecteur2D(90, 40);
-        auto * b1 = new Vecteur2D(90, 90);
-        auto * c1 = new Vecteur2D(40,90);
+        auto * a1 = new Vecteur2D(40,40);
+        auto * b1 = new Vecteur2D(90, 40);
+        auto * c1 = new Vecteur2D(90, 90);
+        auto * d1 = new Vecteur2D(40,90);
 
-        list<Vecteur2D *> points;
-        points.push_back(a1);
-        points.push_back(b1);
-        points.push_back(c1);
-        auto * polygone = new Polygone("blue",pos1,points);
-        cout << "Aire du cercle = " << polygone->calculerAire() << endl;
+        vector<Vecteur2D *> pointsPoly;
+        pointsPoly.push_back(a1);
+        pointsPoly.push_back(b1);
+        pointsPoly.push_back(c1);
+        pointsPoly.push_back(d1);
+        auto * polygone = new Polygone("blue",pointsPoly);
+        cout << "Aire du polygone = " << polygone->calculerAire() << endl;
         // Vecteur2D trPoly = Vecteur2D(0,100);
+        Vecteur2D homoPoly = Vecteur2D(0,0);
         // polygone->translation(trPoly);
+        polygone->homothetie(2, homoPoly);
+        polygone->dessiner(lib);
 
+        /*
         // ---------------------------------------------------
         // Cercle
-        auto * pos2 = new Vecteur2D(150, 90);
-        auto * cercle = new Cercle("green",pos2, 50);
+        auto * centreCercle = new Vecteur2D(150, 75);
+        vector<Vecteur2D *> pointsCercle;
+        pointsCercle.push_back(centreCercle);
+        auto * cercle = new Cercle("green",pointsCercle, 50);
         cout << "Aire du cercle = " << cercle->calculerAire() << endl;
         // Vecteur2D trCercle = Vecteur2D(0,50);
         // cercle->translation(trCercle);
+        // cercle->dessiner(lib);
 
         // ---------------------------------------------------
         // Triangle
-        auto * pos3 = new Vecteur2D(40, 110);
-        auto * a2 = new Vecteur2D(40, 160);
-        auto * b2 = new Vecteur2D(90, 110);
-        auto * triangle = new Triangle("yellow", pos3, a2, b2);
+        auto * a2 = new Vecteur2D(40, 110);
+        auto * b2 = new Vecteur2D(40, 160);
+        auto * c2 = new Vecteur2D(90, 110);
+        vector<Vecteur2D*> pointsTri;
+        pointsTri.push_back(a2);
+        pointsTri.push_back(b2);
+        pointsTri.push_back(c2);
+        auto * triangle = new Triangle("yellow", pointsTri);
         cout << "Aire du triangle = " << triangle->calculerAire() << endl;
         // Vecteur2D trTriangle = Vecteur2D(100, -50);
         // triangle->translation(trTriangle);
+        // triangle->dessiner(lib);
+
 
         // ---------------------------------------------------
         // Segment
-        auto * pos4 = new Vecteur2D(40,200);
-        auto * arr = new Vecteur2D(90, 140);
-        auto * segment = new Segment("black", pos4, arr);
+        auto * dep = new Vecteur2D(50,50);
+        auto * arr = new Vecteur2D(100, 100);
+        vector<Vecteur2D *> pointsSeg;
+        pointsSeg.push_back(dep);
+        pointsSeg.push_back(arr);
+        auto * segment = new Segment("black", pointsSeg);
         cout << "Longueur / aire du segment = " << segment->calculerAire() << endl;
+        auto* transSeg = new Vecteur2D(0,150);
+        segment->translation(transSeg);
+        // segment->dessiner(lib);
 
         // ---------------------------------------------------
         // Groupe
-        list<Forme*> list;
-        list.push_back(polygone);
-        list.push_back(cercle);
-        list.push_back(triangle);
-        list.push_back(segment);
-        auto * groupe = new Groupe("red", list);
+        vector<Forme*> formes;
+        vector<Vecteur2D*> points;
+        formes.push_back(polygone);
+        formes.push_back(cercle);
+        formes.push_back(triangle);
+        formes.push_back(segment);
+        auto * groupe = new Groupe("red", points, formes);
 
         Vecteur2D trGroupe = Vecteur2D(50,50);
         double aireGr = groupe->calculerAire();
         cout << "Aire du groupe = " << aireGr << endl;
         // groupe->translation(trGroupe);
         groupe->dessiner(lib);
+         */
+
 
 
         /**

@@ -17,14 +17,13 @@ class awt : public LibrairieGraphique {
 private:
     ClientDessin client;
 public:
-    awt(const ClientDessin &client);
+    explicit awt(const ClientDessin &client);
 
-    virtual ~awt();
+    ~awt() override;
 
     void dessinerSegment(Segment * segment) override;
     void dessinerCercle(Cercle *cercle) override;
     void dessinerTriangle(Triangle *triangle) override;
-
     void dessinerPolygone(Polygone *polygone) override;
 };
 

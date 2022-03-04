@@ -19,11 +19,37 @@ public :
 
     double determinant(Vecteur2D op)const;
 
-    const Vecteur2D operator + (const Vecteur2D & v) const;
-    const Vecteur2D operator + (const Vecteur2D * v) const;
+    Vecteur2D homotetie(const double k, const Vecteur2D& invariant) const {
+        return Vecteur2D((*this) * k + invariant * (1 - k));
+    }
 
-    const Vecteur2D operator - (const Vecteur2D & v) const;
-    const Vecteur2D operator - (const Vecteur2D * v) const;
+    Vecteur2D rotation(const double rad, const Vecteur2D& invariant)
+    {
+        /*
+        Matrice2x2 R = Matrice2x2::creeRotation(rad);
+        return Vecteur2D(R * (V - invariant) + invariant);
+         */
+        return *this;
+    }
+
+    Vecteur2D operator * (const double k) const {
+        return {getX() * k, getY() * k};
+    }
+
+    Vecteur2D operator + (const Vecteur2D & v) const;
+    Vecteur2D operator + (const Vecteur2D * v) const;
+
+    Vecteur2D operator - (const Vecteur2D & v) const;
+    Vecteur2D operator - (const Vecteur2D * v) const;
+
+    explicit operator string() const {
+        string res = "Vecteur : x=" + to_string(x) + ", y=" + to_string(y);
+        return res;
+    }
+    string toString() const {
+        string res = "Vecteur : x=" + to_string(x) + ", y=" + to_string(y);
+        return res;
+    }
 
     bool operator==(const Vecteur2D &rhs) const;
     bool operator!=(const Vecteur2D &rhs) const;

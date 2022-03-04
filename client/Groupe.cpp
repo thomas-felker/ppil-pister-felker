@@ -1,30 +1,36 @@
 #include "Groupe.h"
 
-Groupe::Groupe(const string &couleur, const list<Forme *> &formes) :
-    formes(formes), couleur(couleur) {
-    for(_List_const_iterator<Forme *> it = formes.begin(); it != formes.end(); it++) {
-        (*it)->setCouleur(couleur);
+Groupe::Groupe(const string &couleur, const vector<Vecteur2D *> &points, const vector<Forme *> &formes)
+        : Forme("Groupe", couleur, points), formes(formes) {
+    for(int i = 0; i < formes.size(); i++) {
+        formes[i]->setCouleur(couleur);
     }
 }
 
-Groupe::~Groupe() {}
+Groupe::~Groupe() = default;
 
 void Groupe::dessiner(LibrairieGraphique *Librairie) {
-    for(_List_const_iterator<Forme *> it = formes.begin(); it != formes.end(); it++) {
-        (*it)->dessiner(Librairie);
-    }
-}
-
-void Groupe::translation(Vecteur2D d) {
-    for(_List_const_iterator<Forme *> it = formes.begin(); it != formes.end(); it++) {
-        (*it)->translation(d);
+    for(int i = 0; i < formes.size(); i++) {
+        formes[i]->dessiner(Librairie);
     }
 }
 
 double Groupe::calculerAire() {
     double res = 0;
-    for(_List_const_iterator<Forme *> it = formes.begin(); it != formes.end(); it++) {
-        res = res + (*it)->calculerAire();
+    for(int i = 0; i < formes.size(); i++) {
+        res += formes[i]->calculerAire();
     }
     return res;
+}
+
+void Groupe::translation(Vecteur2D * d) {
+    for (int i = 0; i < formes.size(); i++) {
+        formes[i]->translation(d);
+    }
+}
+
+void Groupe::translation(Vecteur2D d) {
+    for (int i = 0; i < formes.size(); i++) {
+        formes[i]->translation(d);
+    }
 }

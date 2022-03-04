@@ -5,10 +5,7 @@
 #include "awt.h"
 
 awt::awt(const ClientDessin &client) : client(client) {}
-
-awt::~awt() {
-
-}
+awt::~awt() = default;
 
 void awt::dessinerSegment(Segment * segment) {
     client.envoyer(string((*segment)));
@@ -25,4 +22,3 @@ void awt::dessinerTriangle(Triangle *triangle) {
 void awt::dessinerPolygone(Polygone *polygone) {
     client.envoyer(string(*polygone));
 }
-

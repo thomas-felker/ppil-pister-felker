@@ -4,31 +4,25 @@
 
 using namespace std;
 
-/* static */ MaWinsock * MaWinsock::instanceUnique = NULL;
+MaWinsock * MaWinsock::instanceUnique = nullptr;
 
-/* static */ MaWinsock * MaWinsock::getInstance()
-{
+MaWinsock * MaWinsock::getInstance() {
     if (!instanceUnique) instanceUnique = new MaWinsock;
     return instanceUnique;
 }
 
 
-MaWinsock::MaWinsock(void)
+MaWinsock::MaWinsock()
 {
     int r;
-
-    r = WSAStartup( MAKEWORD(2,0), &wsaData);       // MAKEWORD(2,0) sert à indiquer la version de la librairie à utiliser : 1 pour winsock et 2 pour winsock2
-
-/* en cas de succès, wsaData a été initialisée et l'appel a renvoyé la valeur 0 */
-
+    r = WSAStartup( MAKEWORD(2,0), &wsaData);
     if (r) throw Erreur("L'initialisation a echoue");
-
-    cout << "Initialisation Winsock effectuee"<<endl;
+    cout << "Initialisation de la Winsock reussie."<<endl;
 }
 
 
-MaWinsock::~MaWinsock(void)
+MaWinsock::~MaWinsock()
 {
     WSACleanup();
-    cout << "Liberation des ressources de la winsock effectuee"<<endl;
+    cout << "Suppression de la winsock effectuee."<<endl;
 }
