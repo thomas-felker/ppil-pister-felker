@@ -27,4 +27,4 @@ add_executable(client
         Triangle.cpp
         Triangle.h
         Vecteur2D.cpp
-        Vecteur2D.h main.cpp main.h LibrairieGraphique.cpp LibrairieGraphique.h awt.cpp awt.h)
+        Vecteur2D.h main.cpp main.h LibrairieGraphique.cpp LibrairieGraphique.h awt.cpp awt.h Matrice.cpp Matrice.h)

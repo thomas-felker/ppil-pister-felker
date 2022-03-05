@@ -14,6 +14,7 @@
 #include "Groupe.h"
 #include "awt.h"
 #include <vector>
+#include<math.h>
 
 /*
  * Main.cpp
@@ -59,8 +60,10 @@ int main()
         cout << "Aire du polygone = " << polygone->calculerAire() << endl;
         // Vecteur2D trPoly = Vecteur2D(0,100);
         Vecteur2D homoPoly = Vecteur2D(0,0);
+        Vecteur2D rotaPoly = Vecteur2D(250,250);
         // polygone->translation(trPoly);
         polygone->homothetie(2, homoPoly);
+        polygone->rotation(M_PI, rotaPoly);
         polygone->dessiner(lib);
 
         /*

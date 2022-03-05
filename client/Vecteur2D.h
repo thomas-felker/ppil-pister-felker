@@ -1,6 +1,7 @@
 #pragma once
 #include <sstream>
 #include <ostream>
+#include "Matrice.h"
 
 using namespace std;
 
@@ -23,13 +24,15 @@ public :
         return Vecteur2D((*this) * k + invariant * (1 - k));
     }
 
-    Vecteur2D rotation(const double rad, const Vecteur2D& invariant)
+    Vecteur2D rotation(const double teta, const Vecteur2D& invariant)
     {
-        /*
-        Matrice2x2 R = Matrice2x2::creeRotation(rad);
-        return Vecteur2D(R * (V - invariant) + invariant);
-         */
-        return *this;
+        Matrice M = Matrice::creerMatRotation(teta);
+        return Vecteur2D((*this - invariant) * M + invariant);
+    }
+
+
+    Vecteur2D operator * (Matrice M) const {
+        return {getX() * M.getA() + getY() * M.getC(), getX() * M.getB() + getY() * M.getD()};
     }
 
     Vecteur2D operator * (const double k) const {

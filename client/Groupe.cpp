@@ -34,3 +34,15 @@ void Groupe::translation(Vecteur2D d) {
         formes[i]->translation(d);
     }
 }
+
+void Groupe::homothetie (const double k, const Vecteur2D& invariant) {
+    for (int i = 0; i < formes.size(); i++) {
+        formes[i]->homothetie(k, invariant);
+    }
+}
+
+void Groupe::rotation (const double teta, const Vecteur2D & invariant) {
+    for (int i = 0; i < formes.size(); i++) {
+        formes[i]->rotation(teta, invariant);
+    }
+}
