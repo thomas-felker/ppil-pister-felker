@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['getinstance_0',['getInstance',['../class_winsock.html#a4ab0a6fafd49a2bf5d5e879e4674b594',1,'Winsock']]],
-  ['getpoint_1',['getPoint',['../class_forme.html#adb1df914204746b7893bffc9f28b4c59',1,'Forme']]],
-  ['getpoints_2',['getPoints',['../class_forme.html#ab91384cdf8ef065e7f43c1f314a74c10',1,'Forme']]]
+  ['format_0',['Format',['../class_format.html#aa0d2aa224207b9571610c7e011612e74',1,'Format']]],
+  ['forme_1',['Forme',['../class_forme.html#ac05ab575c1a3c1ccce04a3db24555b7f',1,'Forme']]]
 ];

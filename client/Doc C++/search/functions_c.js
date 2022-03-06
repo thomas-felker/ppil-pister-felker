@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7eclientdessin_0',['~ClientDessin',['../class_client_dessin.html#aad608820f21e52648162eb717cf176d0',1,'ClientDessin']]],
-  ['_7eformat_1',['~Format',['../class_format.html#a24a9d2777b2f03e852055583e08adfcf',1,'Format']]],
-  ['_7eforme_2',['~Forme',['../class_forme.html#ab7895f8b5859fb9b0166a475520b59c9',1,'Forme']]]
+  ['rotation_0',['rotation',['../class_forme.html#a8708c94a9bb739acf388e849d33abd4e',1,'Forme::rotation()'],['../class_groupe.html#af1387501b2230b63dd5d30d640d741cc',1,'Groupe::rotation()'],['../class_vecteur2_d.html#a931d5d79ecbfb13dc60cc321e4dc6f25',1,'Vecteur2D::rotation()']]]
 ];

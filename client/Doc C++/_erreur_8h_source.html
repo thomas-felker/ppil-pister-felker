@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_erreur_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,18 +81,13 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html">arnau</a></li><li class="navelem"><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html">ppil-pister-felker</a></li><li class="navelem"><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html">client</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">Erreur.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_erreur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef ERREUR</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define ERREUR</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="_erreur_8h.html#a8a9dac7f648d09d16b17ff585c9f2efe">    6</a></span><span class="preprocessor">#define ERREUR</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
@@ -81,36 +97,36 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_erreur.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_erreur.html">Erreur</a></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> LONGUEURMESSAGE = 100;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">char</span> message[1+LONGUEURMESSAGE];</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_erreur.html">Erreur</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_erreur.html">Erreur</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * messageErreur);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_erreur.html#a4bad7e055ecc19aa6c7616ddf51d05dd">   16</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_erreur.html#a4bad7e055ecc19aa6c7616ddf51d05dd">LONGUEURMESSAGE</a> = 100;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">   17</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>[1+<a class="code hl_variable" href="class_erreur.html#a4bad7e055ecc19aa6c7616ddf51d05dd">LONGUEURMESSAGE</a>];</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * messageErreur);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> testeEgalite(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> * message);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ae246b37f52f80cbb0a07274b9dbf96f4">testeEgalite</a>(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">testePlusPetitOuEgal</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> a, <span class="keyword">const</span> <span class="keywordtype">int</span> b, <span class="keyword">const</span> <span class="keywordtype">char</span> * message);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">testePlusPetitOuEgal</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> a, <span class="keyword">const</span> <span class="keywordtype">int</span> b, <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">testeAppartient</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> b, <span class="keyword">const</span> <span class="keywordtype">char</span> * message);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">testeAppartient</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> b, <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">testeNonVide</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *d, <span class="keyword">const</span> <span class="keywordtype">char</span> * message);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">testeNonVide</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *d, <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">operator</span> string() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>ostream &amp; operator &lt;&lt; (ostream &amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_erreur.html">Erreur</a> &amp; erreur);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>ostream &amp; <a class="code hl_function" href="_erreur_8h.html#afb6e28bc74ac5698db5ef767fa3bb80e">operator &lt;&lt; </a>(ostream &amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_erreur.html">Erreur</a> &amp; erreur);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">inline</span> <span class="keywordtype">void</span> Erreur::testeEgalite(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> * message)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_erreur.html#ae246b37f52f80cbb0a07274b9dbf96f4">   47</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ae246b37f52f80cbb0a07274b9dbf96f4">Erreur::testeEgalite</a>(<span class="keywordtype">int</span> m, <span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">char</span> * message)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> ( m != n ) <span class="keywordflow">throw</span> <a class="code hl_class" href="class_erreur.html">Erreur</a>(message);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> ( m != n ) <span class="keywordflow">throw</span> <a class="code hl_function" href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur</a>(<a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">   59</a></span><span class="keyword">inline</span> <span class="comment">/*static*/</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> a, <span class="keyword">const</span> <span class="keywordtype">int</span> b, <span class="keyword">const</span> <span class="keywordtype">char</span> * message)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> ( a &gt; b ) <span class="keywordflow">throw</span> <a class="code hl_class" href="class_erreur.html">Erreur</a>(message);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> ( a &gt; b ) <span class="keywordflow">throw</span> <a class="code hl_function" href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur</a>(<a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
@@ -118,8 +134,8 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">   71</a></span><span class="keyword">inline</span> <span class="comment">/*static*/</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">Erreur::testeAppartient</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> b, <span class="keyword">const</span> <span class="keywordtype">char</span> * message)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a>(a,x,message);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a>(x,b,message);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a>(a,x,<a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a>(x,b,<a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">/*{</span></div>
@@ -131,21 +147,30 @@ $(function() {
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">   87</a></span><span class="keyword">inline</span> <span class="comment">/*static*/</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">Erreur::testeNonVide</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *d, <span class="keyword">const</span> <span class="keywordtype">char</span> * message)</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> ( !d ) <span class="keywordflow">throw</span> <a class="code hl_class" href="class_erreur.html">Erreur</a>(message);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> ( !d ) <span class="keywordflow">throw</span> <a class="code hl_function" href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur</a>(<a class="code hl_variable" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">message</a>);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_erreur_html"><div class="ttname"><a href="class_erreur.html">Erreur</a></div><div class="ttdef"><b>Definition:</b> Erreur.h:14</div></div>
-<div class="ttc" id="aclass_erreur_html_acce34c94b6d33f1ddb191305cc36381c"><div class="ttname"><a href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">Erreur::testeAppartient</a></div><div class="ttdeci">static void testeAppartient(int a, int x, int b, const char *message)</div><div class="ttdef"><b>Definition:</b> Erreur.h:71</div></div>
-<div class="ttc" id="aclass_erreur_html_ad239b8fce56d03a9b96a0776f4c3a59f"><div class="ttname"><a href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a></div><div class="ttdeci">static void testePlusPetitOuEgal(const int a, const int b, const char *message)</div><div class="ttdef"><b>Definition:</b> Erreur.h:59</div></div>
-<div class="ttc" id="aclass_erreur_html_ad318a27a06c5c1f68506eb00b9fe6beb"><div class="ttname"><a href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">Erreur::testeNonVide</a></div><div class="ttdeci">static void testeNonVide(const void *d, const char *message)</div><div class="ttdef"><b>Definition:</b> Erreur.h:87</div></div>
+<div class="ttc" id="a_erreur_8h_html_afb6e28bc74ac5698db5ef767fa3bb80e"><div class="ttname"><a href="_erreur_8h.html#afb6e28bc74ac5698db5ef767fa3bb80e">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Erreur &amp;erreur)</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8cpp_source.html#l00037">Erreur.cpp:37</a></div></div>
+<div class="ttc" id="aclass_erreur_html"><div class="ttname"><a href="class_erreur.html">Erreur</a></div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00013">Erreur.h:14</a></div></div>
+<div class="ttc" id="aclass_erreur_html_a4bad7e055ecc19aa6c7616ddf51d05dd"><div class="ttname"><a href="class_erreur.html#a4bad7e055ecc19aa6c7616ddf51d05dd">Erreur::LONGUEURMESSAGE</a></div><div class="ttdeci">static const int LONGUEURMESSAGE</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00016">Erreur.h:16</a></div></div>
+<div class="ttc" id="aclass_erreur_html_a55ae1259e86044a99bb4e78109ece875"><div class="ttname"><a href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">Erreur::message</a></div><div class="ttdeci">char message[1+LONGUEURMESSAGE]</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00017">Erreur.h:17</a></div></div>
+<div class="ttc" id="aclass_erreur_html_acce34c94b6d33f1ddb191305cc36381c"><div class="ttname"><a href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">Erreur::testeAppartient</a></div><div class="ttdeci">static void testeAppartient(int a, int x, int b, const char *message)</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00071">Erreur.h:71</a></div></div>
+<div class="ttc" id="aclass_erreur_html_ad239b8fce56d03a9b96a0776f4c3a59f"><div class="ttname"><a href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur::testePlusPetitOuEgal</a></div><div class="ttdeci">static void testePlusPetitOuEgal(const int a, const int b, const char *message)</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00059">Erreur.h:59</a></div></div>
+<div class="ttc" id="aclass_erreur_html_ad318a27a06c5c1f68506eb00b9fe6beb"><div class="ttname"><a href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">Erreur::testeNonVide</a></div><div class="ttdeci">static void testeNonVide(const void *d, const char *message)</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00087">Erreur.h:87</a></div></div>
+<div class="ttc" id="aclass_erreur_html_ad79ce22141a8664be066e6e7a5686821"><div class="ttname"><a href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur::Erreur</a></div><div class="ttdeci">Erreur()</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8cpp_source.html#l00014">Erreur.cpp:14</a></div></div>
+<div class="ttc" id="aclass_erreur_html_ae246b37f52f80cbb0a07274b9dbf96f4"><div class="ttname"><a href="class_erreur.html#ae246b37f52f80cbb0a07274b9dbf96f4">Erreur::testeEgalite</a></div><div class="ttdeci">static void testeEgalite(int m, int n, const char *message)</div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00047">Erreur.h:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html">arnau</a></li><li class="navelem"><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html">ppil-pister-felker</a></li><li class="navelem"><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html">client</a></li><li class="navelem"><a class="el" href="_erreur_8h.html">Erreur.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

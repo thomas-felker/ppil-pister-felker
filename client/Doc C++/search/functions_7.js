@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mondeecran_0',['mondeEcran',['../class_forme.html#a26793d84146fa03394c8fd1a9180b46e',1,'Forme::mondeEcran()'],['../class_groupe.html#afba9a225a88d9853713fd558c0e853b7',1,'Groupe::mondeEcran()']]]
+  ['initcadre_0',['initCadre',['../class_client_dessin.html#a28c0c5bc874c2d43b47395d3ceee4c5b',1,'ClientDessin']]]
 ];

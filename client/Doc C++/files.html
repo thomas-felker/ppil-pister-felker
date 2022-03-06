@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('files.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -65,39 +85,65 @@ $(function() {
   <div class="headertitle"><div class="title">Liste des fichiers</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Liste de tous les fichiers documentés avec une brève description :</div><div class="directory">
-<div class="levels">[Niveau de détails <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span><span onclick="javascript:toggleLevel(4);">4</span><span onclick="javascript:toggleLevel(5);">5</span><span onclick="javascript:toggleLevel(6);">6</span><span onclick="javascript:toggleLevel(7);">7</span>]</div><table class="directory">
+<div class="textblock">Liste de tous les fichiers avec une brève description :</div><div class="directory">
+<div class="levels">[Niveau de détails <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span><span onclick="javascript:toggleLevel(4);">4</span><span onclick="javascript:toggleLevel(5);">5</span><span onclick="javascript:toggleLevel(6);">6</span><span onclick="javascript:toggleLevel(7);">7</span><span onclick="javascript:toggleLevel(8);">8</span><span onclick="javascript:toggleLevel(9);">9</span><span onclick="javascript:toggleLevel(10);">10</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span id="img_0_" class="iconfopen" onclick="toggleFolder('0_')">&#160;</span><a class="el" href="dir_d522931ffa1371640980b621734a4381.html" target="_self">Users</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_0_" class="arrow" onclick="toggleFolder('0_0_')">&#9660;</span><span id="img_0_0_" class="iconfopen" onclick="toggleFolder('0_0_')">&#160;</span><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html" target="_self">arnau</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_')">&#9660;</span><span id="img_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_')">&#160;</span><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html" target="_self">OneDrive</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_0_0_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_')">&#160;</span><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html" target="_self">ppil-pister-felker</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_0_0_0_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_')">&#160;</span><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html" target="_self">client</a></td><td class="desc"></td></tr>
 <tr id="row_0_0_0_0_0_0_"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_0_')">&#160;</span><a class="el" href="dir_69663792bf4811e552c43cd4fd8e8f5c.html" target="_self">client</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_0_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_client_dessin_8h_source.html"><span class="icondoc"></span></a><b>ClientDessin.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_0_1_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_winsock_8h_source.html"><span class="icondoc"></span></a><b>Winsock.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_" class="even"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_1_" class="arrow" onclick="toggleFolder('0_0_0_0_0_1_')">&#9660;</span><span id="img_0_0_0_0_0_1_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_1_')">&#160;</span><a class="el" href="dir_dfec2fee3abad14b7a8c8e416892ca24.html" target="_self">formes</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_0_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_cercle_8h_source.html"><span class="icondoc"></span></a><b>Cercle.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_1_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_forme_8h_source.html"><span class="icondoc"></span></a><b>Forme.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_2_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_groupe_8h_source.html"><span class="icondoc"></span></a><b>Groupe.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_3_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_matrice_8h_source.html"><span class="icondoc"></span></a><b>Matrice.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_4_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_polygone_8h_source.html"><span class="icondoc"></span></a><b>Polygone.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_5_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_segment_8h_source.html"><span class="icondoc"></span></a><b>Segment.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_6_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_triangle_8h_source.html"><span class="icondoc"></span></a><b>Triangle.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_1_7_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_vecteur2_d_8h_source.html"><span class="icondoc"></span></a><b>Vecteur2D.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_2_"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_2_" class="arrow" onclick="toggleFolder('0_0_0_0_0_2_')">&#9660;</span><span id="img_0_0_0_0_0_2_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_2_')">&#160;</span><a class="el" href="dir_5183b67e5687f40e95668c4af0c6b8ad.html" target="_self">libgraphique</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_2_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="awt_8h_source.html"><span class="icondoc"></span></a><b>awt.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_2_1_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_librairie_graphique_8h_source.html"><span class="icondoc"></span></a><b>LibrairieGraphique.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_3_" class="even"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_3_" class="arrow" onclick="toggleFolder('0_0_0_0_0_3_')">&#9660;</span><span id="img_0_0_0_0_0_3_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_3_')">&#160;</span><a class="el" href="dir_71433b2cf74f0365d3ada62d43e82a5c.html" target="_self">sauvegarde</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_3_0_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_format_8h_source.html"><span class="icondoc"></span></a><b>Format.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_3_1_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="txt_8h_source.html"><span class="icondoc"></span></a><b>txt.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_4_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><a href="_erreur_8h_source.html"><span class="icondoc"></span></a><b>Erreur.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_0_0_5_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><a href="main_8h_source.html"><span class="icondoc"></span></a><b>main.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_client_dessin_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_client_dessin_8cpp.html" target="_self">ClientDessin.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_1_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_client_dessin_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_client_dessin_8h.html" target="_self">ClientDessin.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_2_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_winsock_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_winsock_8cpp.html" target="_self">Winsock.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_3_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_winsock_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_winsock_8h.html" target="_self">Winsock.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_" class="even"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_1_" class="arrow" onclick="toggleFolder('0_0_0_0_0_1_')">&#9660;</span><span id="img_0_0_0_0_0_1_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_1_')">&#160;</span><a class="el" href="dir_a43c1b3652fbf5dda42b7f7f3d8be31d.html" target="_self">cmake-build-debug</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_0_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_1_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_1_0_')">&#9660;</span><span id="img_0_0_0_0_0_1_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_1_0_')">&#160;</span><a class="el" href="dir_4e018bdbbc0e35d5de27169dc6b75249.html" target="_self">CMakeFiles</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_0_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_1_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_1_0_0_')">&#9660;</span><span id="img_0_0_0_0_0_1_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_1_0_0_')">&#160;</span><a class="el" href="dir_48c15d459214cfc130c6c938336a509d.html" target="_self">3.21.1</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_0_0_0_"><td class="entry"><span style="width:128px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_1_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_1_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_0_1_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_1_0_0_0_')">&#160;</span><a class="el" href="dir_0595e7c7663db7e237675444a0f9d7a9.html" target="_self">CompilerIdC</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_0_0_0_0_" class="even"><td class="entry"><span style="width:160px;display:inline-block;">&#160;</span><a href="_c_make_c_compiler_id_8c_source.html"><span class="icondoc"></span></a><a class="el" href="_c_make_c_compiler_id_8c.html" target="_self">CMakeCCompilerId.c</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_0_0_1_"><td class="entry"><span style="width:128px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_1_0_0_1_" class="arrow" onclick="toggleFolder('0_0_0_0_0_1_0_0_1_')">&#9660;</span><span id="img_0_0_0_0_0_1_0_0_1_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_1_0_0_1_')">&#160;</span><a class="el" href="dir_100ff179e90f186e5716bb1b19299b18.html" target="_self">CompilerIdCXX</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_0_0_1_0_" class="even"><td class="entry"><span style="width:160px;display:inline-block;">&#160;</span><a href="_c_make_c_x_x_compiler_id_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_c_make_c_x_x_compiler_id_8cpp.html" target="_self">CMakeCXXCompilerId.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_2_" class="arrow" onclick="toggleFolder('0_0_0_0_0_2_')">&#9660;</span><span id="img_0_0_0_0_0_2_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_2_')">&#160;</span><a class="el" href="dir_dfec2fee3abad14b7a8c8e416892ca24.html" target="_self">formes</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_cercle_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_cercle_8cpp.html" target="_self">Cercle.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_1_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_cercle_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_cercle_8h.html" target="_self">Cercle.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_2_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_forme_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_forme_8cpp.html" target="_self">Forme.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_3_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_forme_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_forme_8h.html" target="_self">Forme.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_4_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_groupe_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_groupe_8cpp.html" target="_self">Groupe.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_5_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_groupe_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_groupe_8h.html" target="_self">Groupe.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_6_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_matrice_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_matrice_8cpp.html" target="_self">Matrice.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_7_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_matrice_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_matrice_8h.html" target="_self">Matrice.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_8_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_polygone_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_polygone_8cpp.html" target="_self">Polygone.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_9_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_polygone_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_polygone_8h.html" target="_self">Polygone.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_10_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_segment_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_segment_8cpp.html" target="_self">Segment.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_11_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_segment_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_segment_8h.html" target="_self">Segment.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_12_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_triangle_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_triangle_8cpp.html" target="_self">Triangle.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_13_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_triangle_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_triangle_8h.html" target="_self">Triangle.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_14_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_vecteur2_d_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_vecteur2_d_8cpp.html" target="_self">Vecteur2D.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_15_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_vecteur2_d_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_vecteur2_d_8h.html" target="_self">Vecteur2D.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_3_" class="even"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_3_" class="arrow" onclick="toggleFolder('0_0_0_0_0_3_')">&#9660;</span><span id="img_0_0_0_0_0_3_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_3_')">&#160;</span><a class="el" href="dir_5183b67e5687f40e95668c4af0c6b8ad.html" target="_self">libgraphique</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_3_0_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="awt_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="awt_8cpp.html" target="_self">awt.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_3_1_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="awt_8h_source.html"><span class="icondoc"></span></a><a class="el" href="awt_8h.html" target="_self">awt.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_3_2_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_librairie_graphique_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_librairie_graphique_8cpp.html" target="_self">LibrairieGraphique.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_3_3_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_librairie_graphique_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_librairie_graphique_8h.html" target="_self">LibrairieGraphique.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_4_"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_4_" class="arrow" onclick="toggleFolder('0_0_0_0_0_4_')">&#9660;</span><span id="img_0_0_0_0_0_4_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_4_')">&#160;</span><a class="el" href="dir_71433b2cf74f0365d3ada62d43e82a5c.html" target="_self">sauvegarde</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_4_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_format_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_format_8cpp.html" target="_self">Format.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_4_1_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="_format_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_format_8h.html" target="_self">Format.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_4_2_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="txt_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="txt_8cpp.html" target="_self">txt.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_4_3_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><a href="txt_8h_source.html"><span class="icondoc"></span></a><a class="el" href="txt_8h.html" target="_self">txt.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_5_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><a href="_erreur_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="_erreur_8cpp.html" target="_self">Erreur.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_6_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><a href="_erreur_8h_source.html"><span class="icondoc"></span></a><a class="el" href="_erreur_8h.html" target="_self">Erreur.h</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_7_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><a href="main_8cpp_source.html"><span class="icondoc"></span></a><a class="el" href="main_8cpp.html" target="_self">main.cpp</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_8_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><a href="main_8h_source.html"><span class="icondoc"></span></a><a class="el" href="main_8h.html" target="_self">main.h</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_winsock.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,30 +81,205 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="#pri-static-attribs">Attributs privés statiques</a> &#124;
 <a href="class_winsock-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle"><div class="title">Référence de la classe Winsock</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_winsock_8h_source.html">Winsock.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a6393d4dead4dca0f7d408aebf5fbc37c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_winsock.html#a6393d4dead4dca0f7d408aebf5fbc37c">~Winsock</a> ()</td></tr>
+<tr class="separator:a6393d4dead4dca0f7d408aebf5fbc37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
-<tr class="memitem:a4ab0a6fafd49a2bf5d5e879e4674b594"><td class="memItemLeft" align="right" valign="top"><a id="a4ab0a6fafd49a2bf5d5e879e4674b594" name="a4ab0a6fafd49a2bf5d5e879e4674b594"></a>
-static <a class="el" href="class_winsock.html">Winsock</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
-<tr class="memdesc:a4ab0a6fafd49a2bf5d5e879e4674b594"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialisation de l'instance <br /></td></tr>
+<tr class="memitem:a4ab0a6fafd49a2bf5d5e879e4674b594"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_winsock.html">Winsock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_winsock.html#a4ab0a6fafd49a2bf5d5e879e4674b594">getInstance</a> ()</td></tr>
+<tr class="memdesc:a4ab0a6fafd49a2bf5d5e879e4674b594"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialisation de l'instance  <a href="class_winsock.html#a4ab0a6fafd49a2bf5d5e879e4674b594">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4ab0a6fafd49a2bf5d5e879e4674b594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a7dd41d2835306bbe64476a1e8eb6ad97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_winsock.html#a7dd41d2835306bbe64476a1e8eb6ad97">Winsock</a> ()</td></tr>
+<tr class="separator:a7dd41d2835306bbe64476a1e8eb6ad97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a3c1f84b90d70969341eac4170f400dcd"><td class="memItemLeft" align="right" valign="top">WSADATA&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_winsock.html#a3c1f84b90d70969341eac4170f400dcd">wsaData</a></td></tr>
+<tr class="separator:a3c1f84b90d70969341eac4170f400dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Attributs privés statiques</h2></td></tr>
+<tr class="memitem:a77730b60df1105a237bf333e43d14567"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_winsock.html">Winsock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_winsock.html#a77730b60df1105a237bf333e43d14567">instanceUnique</a> = nullptr</td></tr>
+<tr class="separator:a77730b60df1105a237bf333e43d14567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock">
+<p class="definition">Définition à la ligne <a class="el" href="_winsock_8h_source.html#l00005">5</a> du fichier <a class="el" href="_winsock_8h_source.html">Winsock.h</a>.</p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a7dd41d2835306bbe64476a1e8eb6ad97" name="a7dd41d2835306bbe64476a1e8eb6ad97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd41d2835306bbe64476a1e8eb6ad97">&#9670;&nbsp;</a></span>Winsock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Winsock::Winsock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_winsock_8cpp_source.html#l00015">15</a> du fichier <a class="el" href="_winsock_8cpp_source.html">Winsock.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordtype">int</span> r;</div>
+<div class="line"><span class="lineno">   18</span>    r = WSAStartup( MAKEWORD(2,0), &amp;<a class="code hl_variable" href="class_winsock.html#a3c1f84b90d70969341eac4170f400dcd">wsaData</a>);</div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">if</span> (r) <span class="keywordflow">throw</span> <a class="code hl_class" href="class_erreur.html">Erreur</a>(<span class="stringliteral">&quot;L&#39;initialisation a echoue&quot;</span>);</div>
+<div class="line"><span class="lineno">   20</span>    cout &lt;&lt; <span class="stringliteral">&quot;Initialisation de la Winsock reussie.&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   21</span>}</div>
+<div class="ttc" id="aclass_erreur_html"><div class="ttname"><a href="class_erreur.html">Erreur</a></div><div class="ttdef"><b>Definition:</b> <a href="_erreur_8h_source.html#l00013">Erreur.h:14</a></div></div>
+<div class="ttc" id="aclass_winsock_html_a3c1f84b90d70969341eac4170f400dcd"><div class="ttname"><a href="class_winsock.html#a3c1f84b90d70969341eac4170f400dcd">Winsock::wsaData</a></div><div class="ttdeci">WSADATA wsaData</div><div class="ttdef"><b>Definition:</b> <a href="_winsock_8h_source.html#l00007">Winsock.h:7</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6393d4dead4dca0f7d408aebf5fbc37c" name="a6393d4dead4dca0f7d408aebf5fbc37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6393d4dead4dca0f7d408aebf5fbc37c">&#9670;&nbsp;</a></span>~Winsock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Winsock::~Winsock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_winsock_8cpp_source.html#l00024">24</a> du fichier <a class="el" href="_winsock_8cpp_source.html">Winsock.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>{</div>
+<div class="line"><span class="lineno">   26</span>    WSACleanup();</div>
+<div class="line"><span class="lineno">   27</span>    cout &lt;&lt; <span class="stringliteral">&quot;Suppression de la winsock effectuee.&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   28</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a4ab0a6fafd49a2bf5d5e879e4674b594" name="a4ab0a6fafd49a2bf5d5e879e4674b594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab0a6fafd49a2bf5d5e879e4674b594">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_winsock.html">Winsock</a> * Winsock::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initialisation de l'instance </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="_winsock_8cpp_source.html#l00009">9</a> du fichier <a class="el" href="_winsock_8cpp_source.html">Winsock.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>                               {</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_winsock.html#a77730b60df1105a237bf333e43d14567">instanceUnique</a>) <a class="code hl_variable" href="class_winsock.html#a77730b60df1105a237bf333e43d14567">instanceUnique</a> = <span class="keyword">new</span> <a class="code hl_function" href="class_winsock.html#a7dd41d2835306bbe64476a1e8eb6ad97">Winsock</a>;</div>
+<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_winsock.html#a77730b60df1105a237bf333e43d14567">instanceUnique</a>;</div>
+<div class="line"><span class="lineno">   12</span>}</div>
+<div class="ttc" id="aclass_winsock_html_a77730b60df1105a237bf333e43d14567"><div class="ttname"><a href="class_winsock.html#a77730b60df1105a237bf333e43d14567">Winsock::instanceUnique</a></div><div class="ttdeci">static Winsock * instanceUnique</div><div class="ttdef"><b>Definition:</b> <a href="_winsock_8h_source.html#l00009">Winsock.h:9</a></div></div>
+<div class="ttc" id="aclass_winsock_html_a7dd41d2835306bbe64476a1e8eb6ad97"><div class="ttname"><a href="class_winsock.html#a7dd41d2835306bbe64476a1e8eb6ad97">Winsock::Winsock</a></div><div class="ttdeci">Winsock()</div><div class="ttdef"><b>Definition:</b> <a href="_winsock_8cpp_source.html#l00015">Winsock.cpp:15</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a id="a77730b60df1105a237bf333e43d14567" name="a77730b60df1105a237bf333e43d14567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77730b60df1105a237bf333e43d14567">&#9670;&nbsp;</a></span>instanceUnique</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_winsock.html">Winsock</a> * Winsock::instanceUnique = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_winsock_8h_source.html#l00009">9</a> du fichier <a class="el" href="_winsock_8h_source.html">Winsock.h</a>.</p>
+
+</div>
+</div>
+<a id="a3c1f84b90d70969341eac4170f400dcd" name="a3c1f84b90d70969341eac4170f400dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1f84b90d70969341eac4170f400dcd">&#9670;&nbsp;</a></span>wsaData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WSADATA Winsock::wsaData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="_winsock_8h_source.html#l00007">7</a> du fichier <a class="el" href="_winsock_8h_source.html">Winsock.h</a>.</p>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>C:/Users/arnau/OneDrive/ppil-pister-felker/client/client/<a class="el" href="_winsock_8h_source.html">Winsock.h</a></li>
-<li>C:/Users/arnau/OneDrive/ppil-pister-felker/client/client/Winsock.cpp</li>
+<li>C:/Users/arnau/OneDrive/ppil-pister-felker/client/client/<a class="el" href="_winsock_8cpp_source.html">Winsock.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_winsock.html">Winsock</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

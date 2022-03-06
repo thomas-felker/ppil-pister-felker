@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_cercle_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,18 +81,13 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html">arnau</a></li><li class="navelem"><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html">ppil-pister-felker</a></li><li class="navelem"><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html">client</a></li><li class="navelem"><a class="el" href="dir_dfec2fee3abad14b7a8c8e416892ca24.html">formes</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">Cercle.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_cercle_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Forme.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_forme_8h.html">Forme.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
@@ -79,27 +95,37 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_cercle.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cercle.html">Cercle</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_forme.html">Forme</a> {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">double</span> rayon;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_cercle.html#afd242462d800ef66e5eb850456f49d75">   11</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_cercle.html#afd242462d800ef66e5eb850456f49d75">rayon</a>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="class_cercle.html">Cercle</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;couleur, <span class="keyword">const</span> vector&lt;Vecteur2D *&gt; &amp;points, <span class="keywordtype">double</span> rayon);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_cercle.html">~Cercle</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_cercle.html#a5812acf12fa496e97922f632791717e8">Cercle</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;couleur, <span class="keyword">const</span> vector&lt;Vecteur2D *&gt; &amp;<a class="code hl_variable" href="class_forme.html#ae00d74adc2334cbe0ef790ff4594b13a">points</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="class_cercle.html#afd242462d800ef66e5eb850456f49d75">rayon</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_cercle.html#af51e241a9f488384b368e43d7a03ca63">   14</a></span>    <a class="code hl_function" href="class_cercle.html#af51e241a9f488384b368e43d7a03ca63">~Cercle</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">double</span> getRayon() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_cercle.html#abc1c953fd5ef431158e89dc8344b1de1">getRayon</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_cercle.html#a5d0893f919995f3c41a4831a846acf99">calculerAire</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cercle.html#ac7983b4992c1e96d3a73006eff3cc3cd">dessiner</a>(<a class="code hl_class" href="class_librairie_graphique.html">LibrairieGraphique</a> *Librairie) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> string() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
-<div class="ttc" id="aclass_cercle_html"><div class="ttname"><a href="class_cercle.html">Cercle</a></div><div class="ttdef"><b>Definition:</b> Cercle.h:9</div></div>
-<div class="ttc" id="aclass_cercle_html_a5d0893f919995f3c41a4831a846acf99"><div class="ttname"><a href="class_cercle.html#a5d0893f919995f3c41a4831a846acf99">Cercle::calculerAire</a></div><div class="ttdeci">double calculerAire() override</div><div class="ttdoc">calcule l'air de la forme géométrique</div><div class="ttdef"><b>Definition:</b> Cercle.cpp:12</div></div>
-<div class="ttc" id="aclass_cercle_html_ac7983b4992c1e96d3a73006eff3cc3cd"><div class="ttname"><a href="class_cercle.html#ac7983b4992c1e96d3a73006eff3cc3cd">Cercle::dessiner</a></div><div class="ttdeci">void dessiner(LibrairieGraphique *Librairie) override</div><div class="ttdoc">méthode permettant de dessiner la forme via la librairie</div><div class="ttdef"><b>Definition:</b> Cercle.cpp:16</div></div>
-<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:17</div></div>
-<div class="ttc" id="aclass_librairie_graphique_html"><div class="ttname"><a href="class_librairie_graphique.html">LibrairieGraphique</a></div><div class="ttdef"><b>Definition:</b> LibrairieGraphique.h:14</div></div>
+<div class="ttc" id="a_forme_8h_html"><div class="ttname"><a href="_forme_8h.html">Forme.h</a></div></div>
+<div class="ttc" id="aclass_cercle_html"><div class="ttname"><a href="class_cercle.html">Cercle</a></div><div class="ttdef"><b>Definition:</b> <a href="_cercle_8h_source.html#l00009">Cercle.h:9</a></div></div>
+<div class="ttc" id="aclass_cercle_html_a5812acf12fa496e97922f632791717e8"><div class="ttname"><a href="class_cercle.html#a5812acf12fa496e97922f632791717e8">Cercle::Cercle</a></div><div class="ttdeci">Cercle(const string &amp;couleur, const vector&lt; Vecteur2D * &gt; &amp;points, double rayon)</div><div class="ttdef"><b>Definition:</b> <a href="_cercle_8cpp_source.html#l00003">Cercle.cpp:3</a></div></div>
+<div class="ttc" id="aclass_cercle_html_a5d0893f919995f3c41a4831a846acf99"><div class="ttname"><a href="class_cercle.html#a5d0893f919995f3c41a4831a846acf99">Cercle::calculerAire</a></div><div class="ttdeci">double calculerAire() override</div><div class="ttdoc">calcule l'air de la forme géométrique</div><div class="ttdef"><b>Definition:</b> <a href="_cercle_8cpp_source.html#l00012">Cercle.cpp:12</a></div></div>
+<div class="ttc" id="aclass_cercle_html_abc1c953fd5ef431158e89dc8344b1de1"><div class="ttname"><a href="class_cercle.html#abc1c953fd5ef431158e89dc8344b1de1">Cercle::getRayon</a></div><div class="ttdeci">double getRayon() const</div><div class="ttdef"><b>Definition:</b> <a href="_cercle_8cpp_source.html#l00008">Cercle.cpp:8</a></div></div>
+<div class="ttc" id="aclass_cercle_html_ac7983b4992c1e96d3a73006eff3cc3cd"><div class="ttname"><a href="class_cercle.html#ac7983b4992c1e96d3a73006eff3cc3cd">Cercle::dessiner</a></div><div class="ttdeci">void dessiner(LibrairieGraphique *Librairie) override</div><div class="ttdoc">méthode permettant de dessiner la forme via la librairie</div><div class="ttdef"><b>Definition:</b> <a href="_cercle_8cpp_source.html#l00016">Cercle.cpp:16</a></div></div>
+<div class="ttc" id="aclass_cercle_html_af51e241a9f488384b368e43d7a03ca63"><div class="ttname"><a href="class_cercle.html#af51e241a9f488384b368e43d7a03ca63">Cercle::~Cercle</a></div><div class="ttdeci">~Cercle() override</div></div>
+<div class="ttc" id="aclass_cercle_html_afd242462d800ef66e5eb850456f49d75"><div class="ttname"><a href="class_cercle.html#afd242462d800ef66e5eb850456f49d75">Cercle::rayon</a></div><div class="ttdeci">double rayon</div><div class="ttdef"><b>Definition:</b> <a href="_cercle_8h_source.html#l00011">Cercle.h:11</a></div></div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> <a href="_forme_8h_source.html#l00017">Forme.h:17</a></div></div>
+<div class="ttc" id="aclass_forme_html_ae00d74adc2334cbe0ef790ff4594b13a"><div class="ttname"><a href="class_forme.html#ae00d74adc2334cbe0ef790ff4594b13a">Forme::points</a></div><div class="ttdeci">vector&lt; Vecteur2D * &gt; points</div><div class="ttdef"><b>Definition:</b> <a href="_forme_8h_source.html#l00021">Forme.h:21</a></div></div>
+<div class="ttc" id="aclass_librairie_graphique_html"><div class="ttname"><a href="class_librairie_graphique.html">LibrairieGraphique</a></div><div class="ttdef"><b>Definition:</b> <a href="_librairie_graphique_8h_source.html#l00014">LibrairieGraphique.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html">arnau</a></li><li class="navelem"><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html">ppil-pister-felker</a></li><li class="navelem"><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html">client</a></li><li class="navelem"><a class="el" href="dir_dfec2fee3abad14b7a8c8e416892ca24.html">formes</a></li><li class="navelem"><a class="el" href="_cercle_8h.html">Cercle.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>

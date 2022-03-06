@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['getinstance_0',['getInstance',['../class_winsock.html#a4ab0a6fafd49a2bf5d5e879e4674b594',1,'Winsock']]],
-  ['getpoint_1',['getPoint',['../class_forme.html#adb1df914204746b7893bffc9f28b4c59',1,'Forme']]],
-  ['getpoints_2',['getPoints',['../class_forme.html#ab91384cdf8ef065e7f43c1f314a74c10',1,'Forme']]],
-  ['groupe_3',['Groupe',['../class_groupe.html',1,'']]]
+  ['envoyer_0',['envoyer',['../class_client_dessin.html#a4f24c8c27ff74c918c41de1595ebe2db',1,'ClientDessin::envoyer(ostringstream query)'],['../class_client_dessin.html#a51c0cecf89897b750e07aa7d81098eb1',1,'ClientDessin::envoyer(string query)']]],
+  ['erreur_1',['Erreur',['../class_erreur.html',1,'Erreur'],['../class_erreur.html#ad79ce22141a8664be066e6e7a5686821',1,'Erreur::Erreur()'],['../class_erreur.html#a15bbbbc7e23e4ea5e6bdebe8e299e6be',1,'Erreur::Erreur(const char *messageErreur)']]],
+  ['erreur_2',['ERREUR',['../_erreur_8h.html#a8a9dac7f648d09d16b17ff585c9f2efe',1,'Erreur.h']]],
+  ['erreur_2ecpp_3',['Erreur.cpp',['../_erreur_8cpp.html',1,'']]],
+  ['erreur_2eh_4',['Erreur.h',['../_erreur_8h.html',1,'']]]
 ];

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,61 +82,131 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Liste de tous les membres de classe documentés avec des liens vers la documentation de classe de chaque membre :</div>
+<div class="textblock">Liste de tous les membres de classe avec des liens vers les classes auxquelles ils appartiennent :</div>
+
+<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>a&#160;:&#160;<a class="el" href="class_matrice.html#a5df7dbeb36790834366905c5462cb74f">Matrice</a></li>
+<li>awt()&#160;:&#160;<a class="el" href="classawt.html#aa2b0ee554302d506e37acf31299f5abf">awt</a></li>
+</ul>
+
+
+<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>b&#160;:&#160;<a class="el" href="class_matrice.html#a837bac52d83d04ed03e4243ec57b5a8b">Matrice</a></li>
+</ul>
+
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>c&#160;:&#160;<a class="el" href="class_matrice.html#a9d179c3db3f24918c274de689843a546">Matrice</a></li>
 <li>calculerAire()&#160;:&#160;<a class="el" href="class_cercle.html#a5d0893f919995f3c41a4831a846acf99">Cercle</a>, <a class="el" href="class_forme.html#a477ad8fbb2e417bdb3cd50b1f72ba691">Forme</a>, <a class="el" href="class_groupe.html#a3451c61fc58d24f4d3ff1e036554bac4">Groupe</a>, <a class="el" href="class_polygone.html#a387cf786b23916d60ec9ecde637ce313">Polygone</a>, <a class="el" href="class_segment.html#a2f4702f5d7f8c07881209c508652fd15">Segment</a>, <a class="el" href="class_triangle.html#af3deb9450bb1c479b4a35b0d13d533b1">Triangle</a></li>
+<li>Cercle()&#160;:&#160;<a class="el" href="class_cercle.html#a5812acf12fa496e97922f632791717e8">Cercle</a></li>
 <li>charger()&#160;:&#160;<a class="el" href="class_format.html#a5498d611dc96e9654b9192c3808390da">Format</a>, <a class="el" href="classtxt.html#a6cf0e91e42ee91528ba5048799a5066e">txt</a></li>
+<li>client&#160;:&#160;<a class="el" href="classawt.html#a52d1e2aea24ee8b0d2052ba6e5f3d422">awt</a></li>
 <li>ClientDessin()&#160;:&#160;<a class="el" href="class_client_dessin.html#a750fc4da47691b82b97942f8ac429afe">ClientDessin</a></li>
+<li>couleur_&#160;:&#160;<a class="el" href="class_forme.html#a812a6dd2b2b53b1ba9180128a566d860">Forme</a></li>
+<li>creerMatRotation()&#160;:&#160;<a class="el" href="class_matrice.html#abe02c4cee93552ff5ecd33840b38b22d">Matrice</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>d&#160;:&#160;<a class="el" href="class_matrice.html#a64ce73ceb4ce36696b28186f1b05e4ce">Matrice</a></li>
 <li>dessiner()&#160;:&#160;<a class="el" href="class_cercle.html#ac7983b4992c1e96d3a73006eff3cc3cd">Cercle</a>, <a class="el" href="class_forme.html#a9d2d5a208fed25dfd65c32673ffc2951">Forme</a>, <a class="el" href="class_groupe.html#a80a7f71373502ea6cec0e09167bccd99">Groupe</a>, <a class="el" href="class_polygone.html#a352a4dcf5b68c9f90b3ea148bd7b868a">Polygone</a>, <a class="el" href="class_segment.html#a6e5d7deda8ec0abcaaa19f9f36a1eb1b">Segment</a>, <a class="el" href="class_triangle.html#a03989b4b90f57f528ec013de47fa9f4e">Triangle</a></li>
+<li>dessinerCercle()&#160;:&#160;<a class="el" href="classawt.html#abfd5e6e54cc5a56262424256090828d5">awt</a>, <a class="el" href="class_librairie_graphique.html#a3539c3abc905ad94efacb8a2c11c31db">LibrairieGraphique</a></li>
+<li>dessinerPolygone()&#160;:&#160;<a class="el" href="classawt.html#af6bc7a8dae6cc0e707bb3e210ec5cd4f">awt</a>, <a class="el" href="class_librairie_graphique.html#af16364f87c7801e79d51098ab9f16fb3">LibrairieGraphique</a></li>
+<li>dessinerSegment()&#160;:&#160;<a class="el" href="classawt.html#ab87faae1ae55a92609fd234fcedc946c">awt</a>, <a class="el" href="class_librairie_graphique.html#a7950ce28dfdee33ea50e65bc511013a5">LibrairieGraphique</a></li>
+<li>dessinerTriangle()&#160;:&#160;<a class="el" href="classawt.html#ad3cae424e1a42193f7b8a4ebe30d064f">awt</a>, <a class="el" href="class_librairie_graphique.html#a282e3091f04f9dfc6db7db90615264e7">LibrairieGraphique</a></li>
+<li>determinant()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a7f86b6f9a24f3b775a66635e9f7755cb">Vecteur2D</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
 <li>envoyer()&#160;:&#160;<a class="el" href="class_client_dessin.html#a4f24c8c27ff74c918c41de1595ebe2db">ClientDessin</a></li>
+<li>Erreur()&#160;:&#160;<a class="el" href="class_erreur.html#ad79ce22141a8664be066e6e7a5686821">Erreur</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
 <li>Format()&#160;:&#160;<a class="el" href="class_format.html#aa0d2aa224207b9571610c7e011612e74">Format</a></li>
 <li>Forme()&#160;:&#160;<a class="el" href="class_forme.html#ac05ab575c1a3c1ccce04a3db24555b7f">Forme</a></li>
+<li>formes&#160;:&#160;<a class="el" href="class_groupe.html#a13e194530af29e598cc1e835fe8e0903">Groupe</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>getA()&#160;:&#160;<a class="el" href="class_matrice.html#a12edf349913ae8d4035712374e814248">Matrice</a></li>
+<li>getB()&#160;:&#160;<a class="el" href="class_matrice.html#a3e48e154b8d63f138a0824cf36a24f79">Matrice</a></li>
+<li>getC()&#160;:&#160;<a class="el" href="class_matrice.html#ad7e572ff6d0818e0fe3762e1b60d5b79">Matrice</a></li>
+<li>getCouleur()&#160;:&#160;<a class="el" href="class_forme.html#a186d1df6c09c4918ede41f00e3cb10bd">Forme</a></li>
+<li>getD()&#160;:&#160;<a class="el" href="class_matrice.html#a68ccd3bc1e5405f96526146e525b2bff">Matrice</a></li>
 <li>getInstance()&#160;:&#160;<a class="el" href="class_winsock.html#a4ab0a6fafd49a2bf5d5e879e4674b594">Winsock</a></li>
+<li>getNom()&#160;:&#160;<a class="el" href="class_forme.html#acc0ba0ffaf3b13ede0b90fcbe94058a4">Forme</a></li>
 <li>getPoint()&#160;:&#160;<a class="el" href="class_forme.html#adb1df914204746b7893bffc9f28b4c59">Forme</a></li>
 <li>getPoints()&#160;:&#160;<a class="el" href="class_forme.html#ab91384cdf8ef065e7f43c1f314a74c10">Forme</a></li>
+<li>getRayon()&#160;:&#160;<a class="el" href="class_cercle.html#abc1c953fd5ef431158e89dc8344b1de1">Cercle</a></li>
+<li>getSock()&#160;:&#160;<a class="el" href="class_client_dessin.html#ac74b15e4b59e9516124bc5050c05a04d">ClientDessin</a></li>
+<li>getSockaddr()&#160;:&#160;<a class="el" href="class_client_dessin.html#a23f93328597ae0393016e3018075b429">ClientDessin</a></li>
+<li>getX()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a6ee0fd59f72ec11ae9261a4266973759">Vecteur2D</a></li>
+<li>getY()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a87763fc846145b23c37d492c183af6b8">Vecteur2D</a></li>
+<li>Groupe()&#160;:&#160;<a class="el" href="class_groupe.html#a73c392ef45e519d82e72bc023590928e">Groupe</a></li>
 </ul>
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>homotetie()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a173d1034c54ea5dec2509529aaaad11d">Vecteur2D</a></li>
 <li>homothetie()&#160;:&#160;<a class="el" href="class_forme.html#ab6c61fa19cef8a74494edf1a2a8ae5eb">Forme</a>, <a class="el" href="class_groupe.html#aef6c8325908a37e50e1fd2e6c60bb76f">Groupe</a></li>
 </ul>
 
 
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>inGroup&#160;:&#160;<a class="el" href="class_forme.html#a9599e3fc857c78c94d0480937b257430">Forme</a></li>
+<li>initCadre()&#160;:&#160;<a class="el" href="class_client_dessin.html#a28c0c5bc874c2d43b47395d3ceee4c5b">ClientDessin</a></li>
+<li>instanceUnique&#160;:&#160;<a class="el" href="class_winsock.html#a77730b60df1105a237bf333e43d14567">Winsock</a></li>
+</ul>
+
+
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>LibrairieGraphique()&#160;:&#160;<a class="el" href="class_librairie_graphique.html#a655374d6214b3ae46683aabdecec783e">LibrairieGraphique</a></li>
 <li>load()&#160;:&#160;<a class="el" href="class_format.html#a735cc67aa78387472262ee1ae72f9351">Format</a></li>
+<li>LONGUEURMESSAGE&#160;:&#160;<a class="el" href="class_erreur.html#a4bad7e055ecc19aa6c7616ddf51d05dd">Erreur</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>Matrice()&#160;:&#160;<a class="el" href="class_matrice.html#a0e31b65ccf6e1ee3af394db131502111">Matrice</a></li>
+<li>message&#160;:&#160;<a class="el" href="class_erreur.html#a55ae1259e86044a99bb4e78109ece875">Erreur</a></li>
 <li>mondeEcran()&#160;:&#160;<a class="el" href="class_forme.html#a26793d84146fa03394c8fd1a9180b46e">Forme</a>, <a class="el" href="class_groupe.html#afba9a225a88d9853713fd558c0e853b7">Groupe</a></li>
 </ul>
 
 
+<h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
+<li>nom_&#160;:&#160;<a class="el" href="class_forme.html#a0dd390d16ff1e29ef1c66ce01c20eda2">Forme</a></li>
+</ul>
+
+
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>operator string()&#160;:&#160;<a class="el" href="class_cercle.html#ad5cbc7691ca7552b535197aa29debd76">Cercle</a>, <a class="el" href="class_forme.html#a5edfa797d76fff91b47e689438d7aef3">Forme</a>, <a class="el" href="class_groupe.html#aa94dbbf0521365120e1b773ae3eb8060">Groupe</a></li>
+<li>operator string()&#160;:&#160;<a class="el" href="class_cercle.html#ad5cbc7691ca7552b535197aa29debd76">Cercle</a>, <a class="el" href="class_erreur.html#a227b2c4491ed0a4646a86da17466f30b">Erreur</a>, <a class="el" href="class_format.html#a091020a119297bd2561b20785ea0be17">Format</a>, <a class="el" href="class_forme.html#a5edfa797d76fff91b47e689438d7aef3">Forme</a>, <a class="el" href="class_groupe.html#aa94dbbf0521365120e1b773ae3eb8060">Groupe</a>, <a class="el" href="classtxt.html#a9c39ae1b043986ab336892cd46f38989">txt</a>, <a class="el" href="class_vecteur2_d.html#a10c83f5b0aaa60cc01912b33e3c76fc5">Vecteur2D</a></li>
+<li>operator!=()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a5ea55df0b33492f27885c104b3cbf580">Vecteur2D</a></li>
+<li>operator*()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a958c85ca8ae6d2af57de6bd8f0039f7a">Vecteur2D</a></li>
+<li>operator+()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a83b0a0560ecfc11a7a5235c13dc8cc46">Vecteur2D</a></li>
+<li>operator-()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#af739da19d19742f60eaf3285f9fae3c2">Vecteur2D</a></li>
+<li>operator&lt;()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a81d7b9fe09c88dca910a00c32642345f">Vecteur2D</a></li>
+<li>operator&lt;&lt;&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a3436bfd341d8713c6fb7cdb3c7c49f99">Vecteur2D</a></li>
+<li>operator&lt;=()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a8f4bcacc7212fef7be823cf08a73d6a2">Vecteur2D</a></li>
+<li>operator==()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#aae44d0a9d57466dbdbc49f490278ac06">Vecteur2D</a></li>
+<li>operator&gt;()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#aa2af54d2218e1fc332a47bc187510fd7">Vecteur2D</a></li>
+<li>operator&gt;=()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a985d0656f095394a3538285f28e6106a">Vecteur2D</a></li>
 <li>ouvreFenetreGraphique()&#160;:&#160;<a class="el" href="class_client_dessin.html#a6ef39524e7889dc3ba9533f13d370850">ClientDessin</a></li>
 </ul>
 
 
+<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>points&#160;:&#160;<a class="el" href="class_forme.html#ae00d74adc2334cbe0ef790ff4594b13a">Forme</a></li>
+<li>Polygone()&#160;:&#160;<a class="el" href="class_polygone.html#a8fde1a61a6dd2708beae9cdd2b200334">Polygone</a></li>
+</ul>
+
+
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>rotation()&#160;:&#160;<a class="el" href="class_forme.html#a8708c94a9bb739acf388e849d33abd4e">Forme</a>, <a class="el" href="class_groupe.html#af1387501b2230b63dd5d30d640d741cc">Groupe</a></li>
+<li>rayon&#160;:&#160;<a class="el" href="class_cercle.html#afd242462d800ef66e5eb850456f49d75">Cercle</a></li>
+<li>rotation()&#160;:&#160;<a class="el" href="class_forme.html#a8708c94a9bb739acf388e849d33abd4e">Forme</a>, <a class="el" href="class_groupe.html#af1387501b2230b63dd5d30d640d741cc">Groupe</a>, <a class="el" href="class_vecteur2_d.html#a931d5d79ecbfb13dc60cc321e4dc6f25">Vecteur2D</a></li>
 </ul>
 
 
@@ -124,26 +214,79 @@ $(function() {
 <li>saitCharger()&#160;:&#160;<a class="el" href="class_format.html#aa27ba976b732030e7a99c9bfa22cccae">Format</a>, <a class="el" href="classtxt.html#a12f7ae764b9cbbbd01fb5c5d0d77f25a">txt</a></li>
 <li>sauvegarder()&#160;:&#160;<a class="el" href="class_forme.html#a362ac461dbd999233f2981b04567574b">Forme</a></li>
 <li>save()&#160;:&#160;<a class="el" href="class_format.html#a92d21af9710d153f08a68665503a5be7">Format</a>, <a class="el" href="classtxt.html#a0d07ef27be4a9a883294ab2f7e27f69d">txt</a></li>
+<li>Segment()&#160;:&#160;<a class="el" href="class_segment.html#a6478fe8093005de5b5e96078e73f6290">Segment</a></li>
+<li>setA()&#160;:&#160;<a class="el" href="class_matrice.html#a948a149ce3219c1af9a3ed5c4e2b830c">Matrice</a></li>
+<li>setB()&#160;:&#160;<a class="el" href="class_matrice.html#adfd60f22c06e18a17b8c8c17e83d1fa4">Matrice</a></li>
+<li>setC()&#160;:&#160;<a class="el" href="class_matrice.html#ade95361f9f466a0ada78466f590a6a02">Matrice</a></li>
+<li>setCouleur()&#160;:&#160;<a class="el" href="class_forme.html#af0b5c9ab7d799511311f897bf77f3f21">Forme</a></li>
+<li>setD()&#160;:&#160;<a class="el" href="class_matrice.html#a92095cd36819858ed6e54451e9bed48a">Matrice</a></li>
+<li>setNom()&#160;:&#160;<a class="el" href="class_forme.html#a8c3e065b8de7576b140aa8c6cb10aafb">Forme</a></li>
+<li>setSock()&#160;:&#160;<a class="el" href="class_client_dessin.html#a250181f38e814c81cabb1d86cb23ac00">ClientDessin</a></li>
+<li>setSockaddr()&#160;:&#160;<a class="el" href="class_client_dessin.html#a121b3a7fe8fc210c648f8ea61ba0ac9e">ClientDessin</a></li>
+<li>setX()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a86c72e35bf635ace62cc8fd01c095ecd">Vecteur2D</a></li>
+<li>setY()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a035a05db2e7fc5b9f886fa50517499b8">Vecteur2D</a></li>
+<li>sock&#160;:&#160;<a class="el" href="class_client_dessin.html#a1cb444e891fbb76b246313e0b71810ba">ClientDessin</a></li>
+<li>sockaddr&#160;:&#160;<a class="el" href="class_client_dessin.html#ad57c3710df3ef44cbe6fab670d2c709b">ClientDessin</a></li>
+<li>suivant_&#160;:&#160;<a class="el" href="class_format.html#ad5e8e3db64244bfb9c32a35c742c259d">Format</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>testeAppartient()&#160;:&#160;<a class="el" href="class_erreur.html#acce34c94b6d33f1ddb191305cc36381c">Erreur</a></li>
+<li>testeEgalite()&#160;:&#160;<a class="el" href="class_erreur.html#ae246b37f52f80cbb0a07274b9dbf96f4">Erreur</a></li>
 <li>testeNonVide()&#160;:&#160;<a class="el" href="class_erreur.html#ad318a27a06c5c1f68506eb00b9fe6beb">Erreur</a></li>
 <li>testePlusPetitOuEgal()&#160;:&#160;<a class="el" href="class_erreur.html#ad239b8fce56d03a9b96a0776f4c3a59f">Erreur</a></li>
+<li>toString()&#160;:&#160;<a class="el" href="class_forme.html#a329a419a5b8fa7227fe8648f98ed952e">Forme</a>, <a class="el" href="class_vecteur2_d.html#a9ee4609e0dd349d5e1f644d5357513af">Vecteur2D</a></li>
 <li>translation()&#160;:&#160;<a class="el" href="class_forme.html#af6a635e405050be3a2ec6cdeb817a898">Forme</a>, <a class="el" href="class_groupe.html#a77ad7bb79ab20e4f56a4562638e009ef">Groupe</a></li>
+<li>Triangle()&#160;:&#160;<a class="el" href="class_triangle.html#ab0e32fc4c8f99d8e399bead582991c24">Triangle</a></li>
+<li>txt()&#160;:&#160;<a class="el" href="classtxt.html#ac19a8d6d449f4e0eafb613fcb49e5052">txt</a></li>
+</ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>Vecteur2D()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a1b839cbdb63b09067075e7df139cb0c3">Vecteur2D</a></li>
+</ul>
+
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>Winsock()&#160;:&#160;<a class="el" href="class_winsock.html#a7dd41d2835306bbe64476a1e8eb6ad97">Winsock</a></li>
+<li>wsaData&#160;:&#160;<a class="el" href="class_winsock.html#a3c1f84b90d70969341eac4170f400dcd">Winsock</a></li>
+</ul>
+
+
+<h3><a id="index_x" name="index_x"></a>- x -</h3><ul>
+<li>x&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a3a18b26b7d21dd930e3b0d22ba8ae4ee">Vecteur2D</a></li>
+</ul>
+
+
+<h3><a id="index_y" name="index_y"></a>- y -</h3><ul>
+<li>y&#160;:&#160;<a class="el" href="class_vecteur2_d.html#a3c8beeb57ed70e29fb603b46798a5d9e">Vecteur2D</a></li>
 </ul>
 
 
 <h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
+<li>~awt()&#160;:&#160;<a class="el" href="classawt.html#a0d2a92ac434b2bea35d132a5b4379d58">awt</a></li>
+<li>~Cercle()&#160;:&#160;<a class="el" href="class_cercle.html#af51e241a9f488384b368e43d7a03ca63">Cercle</a></li>
 <li>~ClientDessin()&#160;:&#160;<a class="el" href="class_client_dessin.html#aad608820f21e52648162eb717cf176d0">ClientDessin</a></li>
 <li>~Format()&#160;:&#160;<a class="el" href="class_format.html#a24a9d2777b2f03e852055583e08adfcf">Format</a></li>
 <li>~Forme()&#160;:&#160;<a class="el" href="class_forme.html#ab7895f8b5859fb9b0166a475520b59c9">Forme</a></li>
+<li>~Groupe()&#160;:&#160;<a class="el" href="class_groupe.html#a7fb9bebe2aeb2461e9c18e32bc7a8c97">Groupe</a></li>
+<li>~LibrairieGraphique()&#160;:&#160;<a class="el" href="class_librairie_graphique.html#a7f709df2fe9ccbb7cf194c74183d9243">LibrairieGraphique</a></li>
+<li>~Matrice()&#160;:&#160;<a class="el" href="class_matrice.html#ae9076e71ad3223654b0d51225bc8b3c0">Matrice</a></li>
+<li>~Polygone()&#160;:&#160;<a class="el" href="class_polygone.html#a53f36c6fe1cc1b6cb9ff6be06847e823">Polygone</a></li>
+<li>~Segment()&#160;:&#160;<a class="el" href="class_segment.html#aa6f619a25b1eaa6854fe8c13695a80f7">Segment</a></li>
+<li>~Triangle()&#160;:&#160;<a class="el" href="class_triangle.html#aeef66ab40f8aefd49e46cfae065f4d30">Triangle</a></li>
+<li>~txt()&#160;:&#160;<a class="el" href="classtxt.html#a823336b4345c2392afed2a97336e80b1">txt</a></li>
+<li>~Vecteur2D()&#160;:&#160;<a class="el" href="class_vecteur2_d.html#aa7a40ecd8c31e20ad910c4ae0be2fe56">Vecteur2D</a></li>
+<li>~Winsock()&#160;:&#160;<a class="el" href="class_winsock.html#a6393d4dead4dca0f7d408aebf5fbc37c">Winsock</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>
