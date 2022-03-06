@@ -16,7 +16,14 @@ public:
     void translation(Vecteur2D *d) override;
     void translation(Vecteur2D d) override;
     void homothetie (const double k, const Vecteur2D& invariant) override;
+
     void rotation (const double teta, const Vecteur2D & invariant) override;
 
+    void mondeEcran(const Vecteur2D &dim) override;
+
     double calculerAire() override;
+
+    explicit operator string() override;
+
+
 };

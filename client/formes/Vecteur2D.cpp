@@ -39,6 +39,10 @@ Vecteur2D Vecteur2D::operator - (const Vecteur2D * v) const {
     return {this->getX() - v->getX(), this->getY() - v->getY()};
 }
 
+Vecteur2D Vecteur2D::operator - () const{
+    return {0 - this->getX(), 0 - this->getY()};
+}
+
 // Autres pérateurs
 ostream &operator<<(ostream &os, const Vecteur2D &d) {
     os << "x: " << d.x << " y: " << d.y;

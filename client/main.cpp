@@ -39,22 +39,21 @@ int main()
         ClientDessin clientDessin( adresseServeur, portServeurDessin);
 
         auto * marge = new Vecteur2D(100,100);
-        auto * dim = new Vecteur2D(900,900);
+        auto * dim = new Vecteur2D(300,300);
         clientDessin.initCadre(marge, dim);
 
         awt * lib = new awt(clientDessin);
         txt * format = new txt(nullptr);
 
-        format->load(clientDessin, "test.txt", "txt");
+        // format->load(clientDessin, "test.txt", "txt");
 
 
-        /*
         // ---------------------------------------------------
         // Polygone
-        auto * a1 = new Vecteur2D(40,40);
-        auto * b1 = new Vecteur2D(90, 40);
-        auto * c1 = new Vecteur2D(90, 90);
-        auto * d1 = new Vecteur2D(40,90);
+        auto * a1 = new Vecteur2D(-10,-10);
+        auto * b1 = new Vecteur2D(50, -10);
+        auto * c1 = new Vecteur2D(50, 50);
+        auto * d1 = new Vecteur2D(-10,50);
 
         vector<Vecteur2D *> pointsPoly;
         pointsPoly.push_back(a1);
@@ -67,13 +66,13 @@ int main()
         Vecteur2D homoPoly = Vecteur2D(0,0);
         Vecteur2D rotaPoly = Vecteur2D(250,250);
         // polygone->translation(trPoly);
-        polygone->homothetie(2, homoPoly);
-        polygone->rotation(M_PI, rotaPoly);
-        polygone->dessiner(lib);
-        polygone->sauvegarder(format, "test");
-        */
+        // polygone->homothetie(2, homoPoly);
+        // polygone->rotation(M_PI, rotaPoly);
+        // polygone->mondeEcran(*dim);
+        // polygone->dessiner(lib);
+        // polygone->sauvegarder(format, "test");
 
-        /*
+
         // ---------------------------------------------------
         // Cercle
         auto * centreCercle = new Vecteur2D(150, 75);
@@ -84,9 +83,7 @@ int main()
         // Vecteur2D trCercle = Vecteur2D(0,50);
         // cercle->translation(trCercle);
         // cercle->dessiner(lib);
-        */
 
-        /*
         // ---------------------------------------------------
         // Triangle
         auto * a2 = new Vecteur2D(30, 200);
@@ -98,12 +95,10 @@ int main()
         pointsTri.push_back(c2);
         auto * triangle = new Triangle("yellow", pointsTri);
         cout << "Aire du triangle = " << triangle->calculerAire() << endl;
-        // Vecteur2D trTriangle = Vecteur2D(100, -50);
-        // triangle->translation(trTriangle);
+        Vecteur2D trTriangle = Vecteur2D(100, 150);
+        triangle->translation(trTriangle);
         // triangle->dessiner(lib);
-         */
 
-        /*
         // ---------------------------------------------------
         // Segment
         auto * dep = new Vecteur2D(50,50);
@@ -131,8 +126,8 @@ int main()
         double aireGr = groupe->calculerAire();
         cout << "Aire du groupe = " << aireGr << endl;
         // groupe->translation(trGroupe);
+        groupe->mondeEcran(*dim);
         groupe->dessiner(lib);
-         */
 
 
 

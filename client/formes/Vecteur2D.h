@@ -44,6 +44,7 @@ public :
 
     Vecteur2D operator - (const Vecteur2D & v) const;
     Vecteur2D operator - (const Vecteur2D * v) const;
+    Vecteur2D operator - () const;
 
     explicit operator string() const {
         string res = "Vecteur : x=" + to_string(x) + ", y=" + to_string(y);

@@ -46,3 +46,16 @@ void Groupe::rotation (const double teta, const Vecteur2D & invariant) {
         formes[i]->rotation(teta, invariant);
     }
 }
+
+void Groupe::mondeEcran(const Vecteur2D &dim) {
+    for (int i = 0; i < formes.size(); i++) {
+        formes[i]->mondeEcran(dim);
+    }
+}
+
+Groupe::operator string() {
+    string res = "";
+    for (int i = 0; i < formes.size(); i++) {
+        res += string(*formes[i]);
+    }
+}

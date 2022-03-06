@@ -84,6 +84,17 @@ public :
         format->save(string(*this),filename);
     }
 
+    virtual void mondeEcran(const Vecteur2D & dim) {
+        for (int i = 0; i < points.size(); i++) {
+            if (points[i]->getX() > dim.getX() || points[i]->getY() > dim.getY()) {
+                translation(-(*points[i]- Vecteur2D(dim.getX()-10, dim.getY()-10)));
+            }
+            if (points[i]->getX() < 0 || points[i]->getY() < 0) {
+                translation(Vecteur2D(10,30) - points[i]);
+            }
+        }
+    }
+
     virtual string toString() {
         string res = nom_ + ":" + couleur_ +",";
         for (int i = 0; i < points.size(); i++) {
