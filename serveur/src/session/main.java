@@ -1,13 +1,5 @@
 package session;
 
-/**
- * Serveur dessinant des scènes 2D en Active-Rendering sur l'écran local. Les ordres de tracés sont donnés par les clients distants.
- *
- *  Serveur multi-client
- *
- *
- *
- * */
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -19,8 +11,7 @@ public class main
 
     public static void main(String[] args)
     {
-        int portServeurDessin = 8091;   // arbitraire. N'importe quel port libre convient
-        try
+        int portServeurDessin = 8091;   
         {
             ServerSocket serveurDessin = new ServerSocket(portServeurDessin);
 
@@ -36,8 +27,8 @@ public class main
                 Socket socket = serveurDessin.accept();
                 ++nombreClients;
                 System.out.println("nouveau client connecté n° = " + nombreClients);
-                SessionDessin sessionDessin = new SessionDessin(socket);                // interlocuteur prenant en charge la session de dessin du nouveau client,
-                sessionDessin.start();                                                  // il travaille dans un thread séparé, en parallèle de l'activité de serveurDessin
+                SessionDessin sessionDessin = new SessionDessin(socket);                
+                sessionDessin.start();                                                  
             }
         }
         catch (IOException e)

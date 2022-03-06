@@ -9,27 +9,38 @@
 using namespace std;
 
 /**
- * crée un client TCP/IP vers un serveur de dessin
+ * crÃ©e un client TCP/IP vers un serveur de dessin
  *
- * envoie 3 requêtes possibles :
- *
- * ouvrir une fenêtre graphique
- * tracer un segment
- * tracer une ellipse pleine
- *
- * protocole : Chaque requête est codée sous forme d'une seule String se terminant par le caractère fin de ligne.
- * Sur la ligne, 2 paramètres consécutifs sont séparés par ", ".
- *
+ *  avec un protocole dÃ©fini ici par une chaine de caractÃ¨re sÃ©parÃ© par le symbole
+ * ","
  * */
+
 class ClientDessin
 {
-    SOCKET sock;  // informations concernant le socket à créer : famille d'adresses acceptées, mode connecté ou non, protocole 
-    SOCKADDR_IN sockaddr; // informations concernant le serveur avec lequel on va communiquer
+    SOCKET sock;   
+    SOCKADDR_IN sockaddr; 
 
 public:
+    /**
+     * 
+     * @brief Constructeur  
+     * 
+     * */
     ClientDessin(const string& adresseServeurDessin, const int portServeurDessin);
+
+    /**
+     * 
+     * @brief Destructeur   
+     * 
+     * */
     ~ClientDessin();
 
+
+    /**
+     * 
+     * @brief Envoie la requete pour ouvrir le cadre de dessin 
+     * 
+     * */
     void ouvreFenetreGraphique(const string& titre, const int bordGauche, const int bordHaut, const int largeur, const int hauteur);
 
     SOCKET getSock() const;
@@ -40,6 +51,12 @@ public:
 
     void setSockaddr(const SOCKADDR_IN &sockaddr);
 
+
+    /**
+     * 
+     * @brief envoie de la requete au serveur   
+     * 
+     * */
     void envoyer(ostringstream query);
     void envoyer(string query);
 

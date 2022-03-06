@@ -5,6 +5,9 @@ import cadre.CadreDessin;
 public class Segment extends Forme {
     private Vecteur2D arrivee;
 
+     /**
+     @brief Constructeur 
+     */
     public Segment(Forme suivant, CadreDessin cadre) {
         super(suivant, cadre);
         arrivee = new Vecteur2D(0,0);

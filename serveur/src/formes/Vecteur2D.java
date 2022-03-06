@@ -4,9 +4,14 @@ import java.util.Objects;
 
 public class Vecteur2D {
     private int x, y;
-
+    /**
+     @brief Constructeur par défaut  
+     */
     public Vecteur2D() {}
 
+     /**
+     @brief Constructeur  avec des coordonées 
+     */
     public Vecteur2D(int x, int y) {
         this.x = x;
         this.y = y;

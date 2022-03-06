@@ -9,6 +9,12 @@ class Winsock
     static Winsock * instanceUnique;
 
 public:
+
+    /**
+     * 
+     * @brief initialisation de l'instance 
+     * 
+     * */
     static Winsock * getInstance();
     ~Winsock();
 };

@@ -21,9 +21,19 @@ private :
     vector<Vecteur2D *> points;
 
 public :
+
+    /**
+     * 
+     * @brief constructeur 
+     * 
+     * */
     Forme(const string &nom, const string &couleur, const vector<Vecteur2D *> &points) :
         nom_(nom), couleur_(couleur), points(points) {}
-
+/**
+     * 
+     * @brief destructeur 
+     * 
+     * */
     virtual ~Forme() = default;
 
     const string &getNom() const {
@@ -40,39 +50,90 @@ public :
         couleur_ = couleur;
     }
 
+    /**
+     * 
+     * @brief retourne les différentes coordonnée de la forme  
+     * 
+     * */
+
     const vector<Vecteur2D *> &getPoints() const {
         return points;
     }
 
+    /**
+     * 
+     * @brief retourne une coordonnée de la forme  
+     * 
+     * */
     Vecteur2D * getPoint(int i) {
         return points[i];
     }
 
+    /**
+     * 
+     * @brief calcule l'air de la forme géométrique  
+     * 
+     * */
     virtual double calculerAire() = 0;
+
+    /**
+     * 
+     * @brief méthode permettant de dessiner la forme via la librairie  
+     * 
+     * */
     virtual void dessiner(LibrairieGraphique * Librairie) = 0;
 
+
+/**
+     * 
+     * @brief opération de translation d'une forme  
+     * 
+     * */
     virtual void translation(Vecteur2D * d) {
         for (int i = 0; i < points.size(); i++) {
             *points[i] = *points[i] + d;
         }
     }
+    /**
+     * 
+     * @brief opération de translation d'une forme  
+     * 
+     * */
     virtual void translation(Vecteur2D d) {
         for (int i = 0; i < points.size(); i++) {
             *points[i] = *points[i] + d;
         }
     }
 
+
+    /**
+     * 
+     * @brief opération d'homothetie d'une forme   
+     * 
+     * */
     virtual void homothetie (const double k, const Vecteur2D& invariant) {
         for (int i = 0; i < points.size(); i++) {
             *points[i] = *points[i] * k + invariant * (1-k);
         }
     }
+
+     /**
+     * 
+     * @brief opération d'homothetie d'une forme   
+     * 
+     * */
     virtual void homothetie (const double k, const Vecteur2D * invariant) {
         for (int i = 0; i < points.size(); i++) {
             *points[i] = *points[i] * k + (*invariant) * (1-k);
         }
     }
 
+
+     /**
+     * 
+     * @brief opération rotation d'une forme   
+     * 
+     * */
     virtual void rotation (const double teta, const Vecteur2D & invariant) {
         for (int i = 0; i < points.size(); i++) {
             points[i]->setX(points[i]->rotation(teta, invariant).getX());
@@ -80,9 +141,21 @@ public :
         }
     }
 
+
+    /**
+     * 
+     * @brief Permet de sauvegarder la forme géométrique    
+     * 
+     * */
     virtual void sauvegarder(Format * format, const string & filename) {
         format->save(string(*this),filename);
     }
+
+    /**
+     * 
+     * @brief passage des coordonnées en monde écran   
+     * 
+     * */
 
     virtual void mondeEcran(const Vecteur2D & dim) {
         for (int i = 0; i < points.size(); i++) {
@@ -108,6 +181,14 @@ public :
         }
         return res;
     }
+
+    /**
+     * 
+     * @brief opérateur string permettant de convertir l'objet en un string au format de notre requete utilisé
+     * par notre protocole    
+     * 
+     * */
+
     virtual explicit operator string() {
         string res = nom_ + ":" + couleur_;
         for (int i = 0; i < points.size(); i++) {

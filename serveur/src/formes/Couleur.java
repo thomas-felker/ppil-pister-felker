@@ -18,6 +18,10 @@ public class Couleur {
         this.name = name;
     }
 
+    /**
+     @brief Retourne la couleur demander par le client 
+     */
+
     public Color getColor() {
         String tmp = getName().toLowerCase().replaceAll(" ", "");
         switch(tmp) {

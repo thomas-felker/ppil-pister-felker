@@ -22,6 +22,10 @@ public class SessionDessin extends Thread {
         this.fluxEntrant = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
     }
 
+    /**
+        @brief initialise le cadre de dessin avec les dimension du client 
+     */
+
     public CadreDessin initCadre(String query) throws IOException, InterruptedException {
         String requete[] = query.split(":");
 
@@ -36,7 +40,10 @@ public class SessionDessin extends Thread {
         return cadre;
     }
 
-    // -- Définition du protocole
+    /** @brief Lancement du serveur et application du protocole 
+    */
+
+
     @Override
     public void run() {
         try {

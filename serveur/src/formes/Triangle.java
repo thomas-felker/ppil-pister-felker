@@ -8,6 +8,9 @@ public class Triangle extends Forme {
     private double ax, ay, bx, by, cx, cy;
     private Vecteur2D A, B, C;
 
+    /**
+     @brief Constructeur 
+     */
     public Triangle(Forme suivant, CadreDessin cadre) {
         super(suivant, cadre);
         A = new Vecteur2D(0,0);

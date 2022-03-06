@@ -8,7 +8,9 @@ import java.lang.reflect.Field;
 public class Cercle extends Forme {
     private int rayon;
 
-
+    /**
+     @brief Constructeur 
+     */
     public Cercle(Forme suivant, CadreDessin cadre) {
         super(suivant, cadre);
     }

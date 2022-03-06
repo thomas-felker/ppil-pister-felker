@@ -9,6 +9,9 @@ public class Polygone extends Forme {
     private int nbPoints;
     private int [] x,y;
 
+    /**
+     @brief Constructeur 
+     */
     public Polygone(Forme suivant, CadreDessin cadre) {
         super(suivant, cadre);
         points = new ArrayList<Vecteur2D>();
