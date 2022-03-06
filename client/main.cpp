@@ -75,7 +75,7 @@ int main()
 
         // ---------------------------------------------------
         // Cercle
-        auto * centreCercle = new Vecteur2D(150, 75);
+        auto * centreCercle = new Vecteur2D(150, -150);
         vector<Vecteur2D *> pointsCercle;
         pointsCercle.push_back(centreCercle);
         auto * cercle = new Cercle("green",pointsCercle, 50);
@@ -86,16 +86,16 @@ int main()
 
         // ---------------------------------------------------
         // Triangle
-        auto * a2 = new Vecteur2D(30, 200);
-        auto * b2 = new Vecteur2D(90, 200);
-        auto * c2 = new Vecteur2D(45, 50);
+        auto * a2 = new Vecteur2D(245, 200);
+        auto * b2 = new Vecteur2D(200, 400);
+        auto * c2 = new Vecteur2D(290, 400);
         vector<Vecteur2D*> pointsTri;
         pointsTri.push_back(a2);
         pointsTri.push_back(b2);
         pointsTri.push_back(c2);
         auto * triangle = new Triangle("yellow", pointsTri);
         cout << "Aire du triangle = " << triangle->calculerAire() << endl;
-        Vecteur2D trTriangle = Vecteur2D(100, 150);
+        Vecteur2D trTriangle = Vecteur2D(20, 0);
         triangle->translation(trTriangle);
         // triangle->dessiner(lib);
 
@@ -116,7 +116,7 @@ int main()
         // Groupe
         vector<Forme*> formes;
         vector<Vecteur2D*> points;
-        formes.push_back(polygone);
+        // formes.push_back(polygone);
         formes.push_back(cercle);
         formes.push_back(triangle);
         formes.push_back(segment);
@@ -126,7 +126,7 @@ int main()
         double aireGr = groupe->calculerAire();
         cout << "Aire du groupe = " << aireGr << endl;
         // groupe->translation(trGroupe);
-        groupe->mondeEcran(*dim);
+        // groupe->mondeEcran(*dim);
         groupe->dessiner(lib);
 
 
