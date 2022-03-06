@@ -51,112 +51,112 @@ build cmake_object_order_depends_target_client: phony || CMakeFiles/client.dir
 
 build CMakeFiles/client.dir/formes/Cercle.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Cercle.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Cercle.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/client/ClientDessin.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/client/ClientDessin.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\client\ClientDessin.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\client
 
 build CMakeFiles/client.dir/Erreur.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/Erreur.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\Erreur.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir
 
 build CMakeFiles/client.dir/formes/Forme.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Forme.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Forme.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/formes/Groupe.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Groupe.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Groupe.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/client/Winsock.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/client/Winsock.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\client\Winsock.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\client
 
 build CMakeFiles/client.dir/formes/Polygone.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Polygone.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Polygone.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/formes/Segment.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Segment.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Segment.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/formes/Triangle.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Triangle.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Triangle.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/formes/Vecteur2D.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Vecteur2D.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Vecteur2D.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/main.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/main.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir
 
 build CMakeFiles/client.dir/libgraphique/LibrairieGraphique.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/libgraphique/LibrairieGraphique.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\libgraphique\LibrairieGraphique.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\libgraphique
 
 build CMakeFiles/client.dir/libgraphique/awt.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/libgraphique/awt.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\libgraphique\awt.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\libgraphique
 
 build CMakeFiles/client.dir/formes/Matrice.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/formes/Matrice.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\formes\Matrice.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\formes
 
 build CMakeFiles/client.dir/sauvegarde/Format.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/Format.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\sauvegarde\Format.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde
 
 build CMakeFiles/client.dir/sauvegarde/txt.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/txt.cpp || cmake_object_order_depends_target_client
   DEP_FILE = CMakeFiles\client.dir\sauvegarde\txt.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
   INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde
@@ -170,7 +170,7 @@ build CMakeFiles/client.dir/sauvegarde/txt.cpp.obj: CXX_COMPILER__client_Debug C
 # Link the executable client.exe
 
 build client.exe: CXX_EXECUTABLE_LINKER__client_Debug CMakeFiles/client.dir/formes/Cercle.cpp.obj CMakeFiles/client.dir/client/ClientDessin.cpp.obj CMakeFiles/client.dir/Erreur.cpp.obj CMakeFiles/client.dir/formes/Forme.cpp.obj CMakeFiles/client.dir/formes/Groupe.cpp.obj CMakeFiles/client.dir/client/Winsock.cpp.obj CMakeFiles/client.dir/formes/Polygone.cpp.obj CMakeFiles/client.dir/formes/Segment.cpp.obj CMakeFiles/client.dir/formes/Triangle.cpp.obj CMakeFiles/client.dir/formes/Vecteur2D.cpp.obj CMakeFiles/client.dir/main.cpp.obj CMakeFiles/client.dir/libgraphique/LibrairieGraphique.cpp.obj CMakeFiles/client.dir/libgraphique/awt.cpp.obj CMakeFiles/client.dir/formes/Matrice.cpp.obj CMakeFiles/client.dir/sauvegarde/Format.cpp.obj CMakeFiles/client.dir/sauvegarde/txt.cpp.obj
-  FLAGS = -g
+  FLAGS = -static-libstdc++ -static-libgcc -g
   LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\client.dir
   POST_BUILD = cd .

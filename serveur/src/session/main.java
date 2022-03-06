@@ -14,7 +14,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class TestServeurDessin
+public class main
 {
 
     public static void main(String[] args)

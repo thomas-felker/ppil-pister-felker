@@ -58,4 +58,5 @@ Groupe::operator string() {
     for (int i = 0; i < formes.size(); i++) {
         res += string(*formes[i]);
     }
+    return res;
 }
