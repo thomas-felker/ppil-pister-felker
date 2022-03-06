@@ -8,23 +8,23 @@ include_directories(.)
 link_libraries(ws2_32 wsock32)
 
 add_executable(client
-        Cercle.cpp
-        Cercle.h
-        ClientDessin.cpp
-        ClientDessin.h
+        formes/Cercle.cpp
+        formes/Cercle.h
+        client/ClientDessin.cpp
+        client/ClientDessin.h
         Erreur.cpp
         Erreur.h
-        Forme.cpp
-        Forme.h
-        Groupe.cpp
-        Groupe.h
-        MaWinsock.cpp
-        MaWinsock.h
-        Polygone.cpp
-        Polygone.h
-        Segment.cpp
-        Segment.h
-        Triangle.cpp
-        Triangle.h
-        Vecteur2D.cpp
-        Vecteur2D.h main.cpp main.h LibrairieGraphique.cpp LibrairieGraphique.h awt.cpp awt.h Matrice.cpp Matrice.h)
+        formes/Forme.cpp
+        formes/Forme.h
+        formes/Groupe.cpp
+        formes/Groupe.h
+        client/Winsock.cpp
+        client/Winsock.h
+        formes/Polygone.cpp
+        formes/Polygone.h
+        formes/Segment.cpp
+        formes/Segment.h
+        formes/Triangle.cpp
+        formes/Triangle.h
+        formes/Vecteur2D.cpp
+        formes/Vecteur2D.h main.cpp main.h libgraphique/LibrairieGraphique.cpp libgraphique/LibrairieGraphique.h libgraphique/awt.cpp libgraphique/awt.h formes/Matrice.cpp formes/Matrice.h sauvegarde/Format.cpp sauvegarde/Format.h sauvegarde/txt.cpp sauvegarde/txt.h)

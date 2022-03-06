@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Forme.h"
-#include "LibrairieGraphique.h"
+#include "libgraphique/LibrairieGraphique.h"
 #include <vector>
 
 class Groupe : public Forme {

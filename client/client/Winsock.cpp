@@ -1,18 +1,18 @@
 #include <iostream>
 #include "Erreur.h"
-#include "MaWinsock.h"
+#include "Winsock.h"
 
 using namespace std;
 
-MaWinsock * MaWinsock::instanceUnique = nullptr;
+Winsock * Winsock::instanceUnique = nullptr;
 
-MaWinsock * MaWinsock::getInstance() {
-    if (!instanceUnique) instanceUnique = new MaWinsock;
+Winsock * Winsock::getInstance() {
+    if (!instanceUnique) instanceUnique = new Winsock;
     return instanceUnique;
 }
 
 
-MaWinsock::MaWinsock()
+Winsock::Winsock()
 {
     int r;
     r = WSAStartup( MAKEWORD(2,0), &wsaData);
@@ -21,7 +21,7 @@ MaWinsock::MaWinsock()
 }
 
 
-MaWinsock::~MaWinsock()
+Winsock::~Winsock()
 {
     WSACleanup();
     cout << "Suppression de la winsock effectuee."<<endl;

@@ -7,12 +7,13 @@
 #include <iostream>
 #include <string>
 #include "Erreur.h"
-#include "ClientDessin.h"
-#include "Cercle.h"
-#include "Segment.h"
-#include "Triangle.h"
-#include "Groupe.h"
-#include "awt.h"
+#include "client/ClientDessin.h"
+#include "formes/Cercle.h"
+#include "formes/Segment.h"
+#include "formes/Triangle.h"
+#include "formes/Groupe.h"
+#include "libgraphique/awt.h"
+#include "sauvegarde/txt.h"
 #include <vector>
 #include<math.h>
 
@@ -42,8 +43,12 @@ int main()
         clientDessin.initCadre(marge, dim);
 
         awt * lib = new awt(clientDessin);
+        txt * format = new txt(nullptr);
+
+        format->load(clientDessin, "test.txt", "txt");
 
 
+        /*
         // ---------------------------------------------------
         // Polygone
         auto * a1 = new Vecteur2D(40,40);
@@ -65,6 +70,8 @@ int main()
         polygone->homothetie(2, homoPoly);
         polygone->rotation(M_PI, rotaPoly);
         polygone->dessiner(lib);
+        polygone->sauvegarder(format, "test");
+        */
 
         /*
         // ---------------------------------------------------
@@ -77,12 +84,14 @@ int main()
         // Vecteur2D trCercle = Vecteur2D(0,50);
         // cercle->translation(trCercle);
         // cercle->dessiner(lib);
+        */
 
+        /*
         // ---------------------------------------------------
         // Triangle
-        auto * a2 = new Vecteur2D(40, 110);
-        auto * b2 = new Vecteur2D(40, 160);
-        auto * c2 = new Vecteur2D(90, 110);
+        auto * a2 = new Vecteur2D(30, 200);
+        auto * b2 = new Vecteur2D(90, 200);
+        auto * c2 = new Vecteur2D(45, 50);
         vector<Vecteur2D*> pointsTri;
         pointsTri.push_back(a2);
         pointsTri.push_back(b2);
@@ -92,8 +101,9 @@ int main()
         // Vecteur2D trTriangle = Vecteur2D(100, -50);
         // triangle->translation(trTriangle);
         // triangle->dessiner(lib);
+         */
 
-
+        /*
         // ---------------------------------------------------
         // Segment
         auto * dep = new Vecteur2D(50,50);

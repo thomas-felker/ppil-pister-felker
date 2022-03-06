@@ -1,10 +1,10 @@
 #pragma once
 
-#include <WinSock2.h>
+#include <winsock2.h>
 #include <string>
 #include <string.h>
 #include <sstream>
-#include "Vecteur2D.h"
+#include "formes/Vecteur2D.h"
 
 using namespace std;
 

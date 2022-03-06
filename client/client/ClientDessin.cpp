@@ -10,7 +10,7 @@
 #include <string>
 #include <sstream>
 #include "Erreur.h"
-#include "MaWinsock.h"
+#include "client/Winsock.h"
 #include "ClientDessin.h"
 
 using namespace std;
@@ -31,7 +31,7 @@ using namespace std;
 
 ClientDessin::ClientDessin( const string & adresseServeurDessin, const int portServeurDessin)
 {
-    MaWinsock::getInstance();	// initialisation de la DLL : effectuée une seule fois
+    Winsock::getInstance();	// initialisation de la DLL : effectuée une seule fois
 
 //---------------------- création socket -------------------------------------------------
     int r;

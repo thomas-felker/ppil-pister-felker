@@ -5,12 +5,12 @@
 #ifndef CLIENT_AWT_H
 #define CLIENT_AWT_H
 
-#include "LibrairieGraphique.h"
-#include "ClientDessin.h"
-#include "Segment.h"
-#include "Cercle.h"
-#include "Triangle.h"
-#include "Polygone.h"
+#include "libgraphique/LibrairieGraphique.h"
+#include "client/ClientDessin.h"
+#include "formes/Segment.h"
+#include "formes/Cercle.h"
+#include "formes/Triangle.h"
+#include "formes/Polygone.h"
 
 
 class awt : public LibrairieGraphique {

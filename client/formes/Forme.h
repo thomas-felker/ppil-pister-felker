@@ -8,9 +8,11 @@
 #include <math.h>
 #include <vector>
 #include "Vecteur2D.h"
-#include "LibrairieGraphique.h"
+#include "libgraphique/LibrairieGraphique.h"
+#include "sauvegarde/Format.h"
 
 using namespace std;
+
 
 class Forme {
 private :
@@ -65,7 +67,6 @@ public :
             *points[i] = *points[i] * k + invariant * (1-k);
         }
     }
-
     virtual void homothetie (const double k, const Vecteur2D * invariant) {
         for (int i = 0; i < points.size(); i++) {
             *points[i] = *points[i] * k + (*invariant) * (1-k);
@@ -77,6 +78,10 @@ public :
             points[i]->setX(points[i]->rotation(teta, invariant).getX());
             points[i]->setY(points[i]->rotation(teta, invariant).getY());
         }
+    }
+
+    virtual void sauvegarder(Format * format, const string & filename) {
+        format->save(string(*this),filename);
     }
 
     virtual string toString() {
