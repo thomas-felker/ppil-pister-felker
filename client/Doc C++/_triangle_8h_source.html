@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL:  Fichier source de C:/Users/arnau/OneDrive/ppil-pister-felker/client/formes/Triangle.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html">arnau</a></li><li class="navelem"><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html">ppil-pister-felker</a></li><li class="navelem"><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html">client</a></li><li class="navelem"><a class="el" href="dir_dfec2fee3abad14b7a8c8e416892ca24.html">formes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Triangle.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;formes/Forme.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_triangle.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_triangle.html">Triangle</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_forme.html">Forme</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_class" href="class_triangle.html">Triangle</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;couleur, <span class="keyword">const</span> vector&lt;Vecteur2D *&gt; &amp;points);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_class" href="class_triangle.html">~Triangle</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_triangle.html#af3deb9450bb1c479b4a35b0d13d533b1">calculerAire</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_triangle.html#a03989b4b90f57f528ec013de47fa9f4e">dessiner</a>(<a class="code hl_class" href="class_librairie_graphique.html">LibrairieGraphique</a> *Librairie) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:17</div></div>
+<div class="ttc" id="aclass_librairie_graphique_html"><div class="ttname"><a href="class_librairie_graphique.html">LibrairieGraphique</a></div><div class="ttdef"><b>Definition:</b> LibrairieGraphique.h:14</div></div>
+<div class="ttc" id="aclass_triangle_html"><div class="ttname"><a href="class_triangle.html">Triangle</a></div><div class="ttdef"><b>Definition:</b> Triangle.h:4</div></div>
+<div class="ttc" id="aclass_triangle_html_a03989b4b90f57f528ec013de47fa9f4e"><div class="ttname"><a href="class_triangle.html#a03989b4b90f57f528ec013de47fa9f4e">Triangle::dessiner</a></div><div class="ttdeci">void dessiner(LibrairieGraphique *Librairie) override</div><div class="ttdoc">méthode permettant de dessiner la forme via la librairie</div><div class="ttdef"><b>Definition:</b> Triangle.cpp:16</div></div>
+<div class="ttc" id="aclass_triangle_html_af3deb9450bb1c479b4a35b0d13d533b1"><div class="ttname"><a href="class_triangle.html#af3deb9450bb1c479b4a35b0d13d533b1">Triangle::calculerAire</a></div><div class="ttdeci">double calculerAire() override</div><div class="ttdoc">calcule l'air de la forme géométrique</div><div class="ttdef"><b>Definition:</b> Triangle.cpp:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

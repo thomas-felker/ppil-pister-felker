@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PPIL:  Fichier source de C:/Users/arnau/OneDrive/ppil-pister-felker/client/sauvegarde/Format.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PPIL<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_69d1760cc47ea25cf0c3cd3c3765214e.html">arnau</a></li><li class="navelem"><a class="el" href="dir_095c290e94aae2693726c05fd30fddaf.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_a47de10ae30e2ba0ae4ff7b6fd0eafdc.html">ppil-pister-felker</a></li><li class="navelem"><a class="el" href="dir_f125b226d5e6e526a2e4e53e9aca4cf8.html">client</a></li><li class="navelem"><a class="el" href="dir_71433b2cf74f0365d3ada62d43e82a5c.html">sauvegarde</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Format.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by satom on 05/03/2022.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef CLIENT_FORMAT_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define CLIENT_FORMAT_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;Erreur.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;client/ClientDessin.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_forme.html">Forme</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_format.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_format.html">Format</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_format.html">Format</a> * suivant_;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_format.html#aa0d2aa224207b9571610c7e011612e74">Format</a>(<a class="code hl_class" href="class_format.html">Format</a> *suivant = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_format.html#a24a9d2777b2f03e852055583e08adfcf">   35</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_format.html#a24a9d2777b2f03e852055583e08adfcf">~Format</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_format.html#a92d21af9710d153f08a68665503a5be7">   43</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_format.html#a92d21af9710d153f08a68665503a5be7">save</a>(<span class="keywordtype">string</span> query, <span class="keywordtype">string</span> filename) = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_format.html#a5498d611dc96e9654b9192c3808390da">   50</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_format.html#a5498d611dc96e9654b9192c3808390da">charger</a>(<a class="code hl_class" href="class_client_dessin.html">ClientDessin</a> &amp; client, <span class="keywordtype">string</span> filename) = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_format.html#aa27ba976b732030e7a99c9bfa22cccae">   56</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_format.html#aa27ba976b732030e7a99c9bfa22cccae">saitCharger</a>(<span class="keywordtype">string</span> type) = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_format.html#a735cc67aa78387472262ee1ae72f9351">   64</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_format.html#a735cc67aa78387472262ee1ae72f9351">load</a>(<a class="code hl_class" href="class_client_dessin.html">ClientDessin</a> &amp; client, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; filename, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; type) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="class_format.html#aa27ba976b732030e7a99c9bfa22cccae">saitCharger</a>(type)) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_function" href="class_format.html#a5498d611dc96e9654b9192c3808390da">charger</a>(client, <span class="stringliteral">&quot;../sauvegarde/saves/&quot;</span>+filename);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (suivant_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            suivant_-&gt;<a class="code hl_function" href="class_format.html#a735cc67aa78387472262ee1ae72f9351">load</a>(client, filename, type);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_class" href="class_erreur.html">Erreur</a>(<span class="stringliteral">&quot;Erreur : Format inconnu&quot;</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">virtual</span> <span class="keyword">explicit</span> <span class="keyword">operator</span> string() { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif </span><span class="comment">//CLIENT_FORMAT_H</span></div>
+<div class="ttc" id="aclass_client_dessin_html"><div class="ttname"><a href="class_client_dessin.html">ClientDessin</a></div><div class="ttdef"><b>Definition:</b> ClientDessin.h:19</div></div>
+<div class="ttc" id="aclass_erreur_html"><div class="ttname"><a href="class_erreur.html">Erreur</a></div><div class="ttdef"><b>Definition:</b> Erreur.h:14</div></div>
+<div class="ttc" id="aclass_format_html"><div class="ttname"><a href="class_format.html">Format</a></div><div class="ttdef"><b>Definition:</b> Format.h:17</div></div>
+<div class="ttc" id="aclass_format_html_a24a9d2777b2f03e852055583e08adfcf"><div class="ttname"><a href="class_format.html#a24a9d2777b2f03e852055583e08adfcf">Format::~Format</a></div><div class="ttdeci">virtual ~Format()</div><div class="ttdoc">Destructeur</div></div>
+<div class="ttc" id="aclass_format_html_a5498d611dc96e9654b9192c3808390da"><div class="ttname"><a href="class_format.html#a5498d611dc96e9654b9192c3808390da">Format::charger</a></div><div class="ttdeci">virtual void charger(ClientDessin &amp;client, string filename)=0</div><div class="ttdoc">permet de charger la requete voulu</div></div>
+<div class="ttc" id="aclass_format_html_a735cc67aa78387472262ee1ae72f9351"><div class="ttname"><a href="class_format.html#a735cc67aa78387472262ee1ae72f9351">Format::load</a></div><div class="ttdeci">virtual void load(ClientDessin &amp;client, const string &amp;filename, const string &amp;type)</div><div class="ttdoc">méthode qui charge la requete sauvegarder dans un fichier et l'envoie au serveur pour la dessiner</div><div class="ttdef"><b>Definition:</b> Format.h:64</div></div>
+<div class="ttc" id="aclass_format_html_a92d21af9710d153f08a68665503a5be7"><div class="ttname"><a href="class_format.html#a92d21af9710d153f08a68665503a5be7">Format::save</a></div><div class="ttdeci">virtual void save(string query, string filename)=0</div><div class="ttdoc">Permet de sauvegarder la requete voulu.</div></div>
+<div class="ttc" id="aclass_format_html_aa0d2aa224207b9571610c7e011612e74"><div class="ttname"><a href="class_format.html#aa0d2aa224207b9571610c7e011612e74">Format::Format</a></div><div class="ttdeci">Format(Format *suivant=nullptr)</div><div class="ttdoc">Constructeur</div><div class="ttdef"><b>Definition:</b> Format.cpp:7</div></div>
+<div class="ttc" id="aclass_format_html_aa27ba976b732030e7a99c9bfa22cccae"><div class="ttname"><a href="class_format.html#aa27ba976b732030e7a99c9bfa22cccae">Format::saitCharger</a></div><div class="ttdeci">virtual bool saitCharger(string type)=0</div><div class="ttdoc">méthode utilisant le pattern COR qui vérifie si l'on sait comment charger ce type de fichier</div></div>
+<div class="ttc" id="aclass_forme_html"><div class="ttname"><a href="class_forme.html">Forme</a></div><div class="ttdef"><b>Definition:</b> Forme.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
