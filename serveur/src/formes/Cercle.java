@@ -17,6 +17,8 @@ public class Cercle extends Forme {
 
     @Override
     public void dessiner(String query) throws Exception {
+        this.getPosition().setX(getPosition().getX());
+        this.getPosition().setY(getPosition().getY());
         cadre.graphics.setColor(this.getCouleur().getColor());
         cadre.graphics.fillOval(getPosition().getX(), getPosition().getY(), rayon, rayon);
 
@@ -31,7 +33,7 @@ public class Cercle extends Forme {
         } else {
             args = test[1].split(",");
             this.getCouleur().setName(args[0]);
-            this.getPosition().setXY(Integer.parseInt(args[1].trim()), Integer.parseInt(args[2].trim()));
+            this.getPosition().setXY(ix + Integer.parseInt(args[1].trim()), iy + Integer.parseInt(args[2].trim()));
             rayon = Integer.parseInt(args[3].trim());
 
             return true;

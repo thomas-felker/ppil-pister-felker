@@ -1,5 +1,7 @@
 package formes;
 
+import cadre.CadreDessin;
+
 import java.util.Objects;
 
 public class Vecteur2D {
@@ -34,6 +36,10 @@ public class Vecteur2D {
     public void setXY( int x, int y) {
         setX(x);
         setY(y);
+    }
+
+    public void WorldScreen(CadreDessin cadre) {
+
     }
 
     @Override

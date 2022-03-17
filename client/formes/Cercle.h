@@ -16,6 +16,10 @@ public:
     double getRayon() const;
     double calculerAire() override;
 
+    void homothetie(const double k, const Vecteur2D &invariant) override;
+
+    void homothetie(const double k, const Vecteur2D *invariant) override;
+
     void dessiner(LibrairieGraphique *Librairie) override;
 
     explicit operator string() override;

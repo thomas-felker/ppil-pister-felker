@@ -28,4 +28,4 @@ add_executable(client
         formes/Triangle.cpp
         formes/Triangle.h
         formes/Vecteur2D.cpp
-        formes/Vecteur2D.h main.cpp main.h libgraphique/LibrairieGraphique.cpp libgraphique/LibrairieGraphique.h libgraphique/awt.cpp libgraphique/awt.h formes/Matrice.cpp formes/Matrice.h sauvegarde/Format.cpp sauvegarde/Format.h sauvegarde/txt.cpp sauvegarde/txt.h)
+        formes/Vecteur2D.h main.cpp main.h libgraphique/LibrairieGraphique.cpp libgraphique/LibrairieGraphique.h libgraphique/awt.cpp libgraphique/awt.h formes/Matrice.cpp formes/Matrice.h sauvegarde/Format.cpp sauvegarde/Format.h sauvegarde/txt.cpp sauvegarde/txt.h sauvegarde/saves/parserCOR.cpp sauvegarde/saves/parserCOR.h sauvegarde/saves/parserGroupe.cpp sauvegarde/saves/parserGroupe.h sauvegarde/saves/parserSegment.cpp sauvegarde/saves/parserSegment.h sauvegarde/saves/parserCercle.cpp sauvegarde/saves/parserCercle.h sauvegarde/saves/parserPolygone.cpp sauvegarde/saves/parserPolygone.h sauvegarde/saves/parserTriangle.cpp sauvegarde/saves/parserTriangle.h)

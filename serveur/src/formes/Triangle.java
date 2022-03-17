@@ -37,9 +37,9 @@ public class Triangle extends Forme {
         } else {
             args = test[1].split(",");
             this.getCouleur().setName(args[0]);
-            A.setXY(Integer.parseInt(args[1].trim()), Integer.parseInt(args[2].trim()));
-            B.setXY(Integer.parseInt(args[3].trim()), Integer.parseInt(args[4].trim()));
-            C.setXY(Integer.parseInt(args[5].trim()), Integer.parseInt(args[6].trim()));
+            A.setXY(ix + Integer.parseInt(args[1].trim()), iy + Integer.parseInt(args[2].trim()));
+            B.setXY(ix + Integer.parseInt(args[3].trim()), iy + Integer.parseInt(args[4].trim()));
+            C.setXY(ix + Integer.parseInt(args[5].trim()), iy + Integer.parseInt(args[6].trim()));
             return true;
         }
     }

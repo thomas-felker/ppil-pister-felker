@@ -20,3 +20,14 @@ void Cercle::dessiner(LibrairieGraphique *Librairie) {
 Cercle::operator string() {
     return Forme::operator string() + + "," + to_string(int(rayon));
 }
+
+void Cercle::homothetie(const double k, const Vecteur2D &invariant) {
+    Forme::homothetie(k, invariant);
+    this->rayon = this->rayon * k;
+}
+
+void Cercle::homothetie(const double k, const Vecteur2D *invariant) {
+    Forme::homothetie(k, invariant);
+    this->rayon = this->rayon * k;
+}
+

@@ -161,6 +161,48 @@ build CMakeFiles/client.dir/sauvegarde/txt.cpp.obj: CXX_COMPILER__client_Debug C
   OBJECT_DIR = CMakeFiles\client.dir
   OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde
 
+build CMakeFiles/client.dir/sauvegarde/saves/parserCOR.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/saves/parserCOR.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\sauvegarde\saves\parserCOR.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
+  INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde\saves
+
+build CMakeFiles/client.dir/sauvegarde/saves/parserGroupe.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/saves/parserGroupe.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\sauvegarde\saves\parserGroupe.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
+  INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde\saves
+
+build CMakeFiles/client.dir/sauvegarde/saves/parserSegment.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/saves/parserSegment.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\sauvegarde\saves\parserSegment.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
+  INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde\saves
+
+build CMakeFiles/client.dir/sauvegarde/saves/parserCercle.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/saves/parserCercle.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\sauvegarde\saves\parserCercle.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
+  INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde\saves
+
+build CMakeFiles/client.dir/sauvegarde/saves/parserPolygone.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/saves/parserPolygone.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\sauvegarde\saves\parserPolygone.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
+  INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde\saves
+
+build CMakeFiles/client.dir/sauvegarde/saves/parserTriangle.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/satom/Documents/GitHub/ppil-pister-felker/client/sauvegarde/saves/parserTriangle.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\sauvegarde\saves\parserTriangle.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++14
+  INCLUDES = -IC:/Users/satom/Documents/GitHub/ppil-pister-felker/client/.
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\sauvegarde\saves
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target client
@@ -169,7 +211,7 @@ build CMakeFiles/client.dir/sauvegarde/txt.cpp.obj: CXX_COMPILER__client_Debug C
 #############################################
 # Link the executable client.exe
 
-build client.exe: CXX_EXECUTABLE_LINKER__client_Debug CMakeFiles/client.dir/formes/Cercle.cpp.obj CMakeFiles/client.dir/client/ClientDessin.cpp.obj CMakeFiles/client.dir/Erreur.cpp.obj CMakeFiles/client.dir/formes/Forme.cpp.obj CMakeFiles/client.dir/formes/Groupe.cpp.obj CMakeFiles/client.dir/client/Winsock.cpp.obj CMakeFiles/client.dir/formes/Polygone.cpp.obj CMakeFiles/client.dir/formes/Segment.cpp.obj CMakeFiles/client.dir/formes/Triangle.cpp.obj CMakeFiles/client.dir/formes/Vecteur2D.cpp.obj CMakeFiles/client.dir/main.cpp.obj CMakeFiles/client.dir/libgraphique/LibrairieGraphique.cpp.obj CMakeFiles/client.dir/libgraphique/awt.cpp.obj CMakeFiles/client.dir/formes/Matrice.cpp.obj CMakeFiles/client.dir/sauvegarde/Format.cpp.obj CMakeFiles/client.dir/sauvegarde/txt.cpp.obj
+build client.exe: CXX_EXECUTABLE_LINKER__client_Debug CMakeFiles/client.dir/formes/Cercle.cpp.obj CMakeFiles/client.dir/client/ClientDessin.cpp.obj CMakeFiles/client.dir/Erreur.cpp.obj CMakeFiles/client.dir/formes/Forme.cpp.obj CMakeFiles/client.dir/formes/Groupe.cpp.obj CMakeFiles/client.dir/client/Winsock.cpp.obj CMakeFiles/client.dir/formes/Polygone.cpp.obj CMakeFiles/client.dir/formes/Segment.cpp.obj CMakeFiles/client.dir/formes/Triangle.cpp.obj CMakeFiles/client.dir/formes/Vecteur2D.cpp.obj CMakeFiles/client.dir/main.cpp.obj CMakeFiles/client.dir/libgraphique/LibrairieGraphique.cpp.obj CMakeFiles/client.dir/libgraphique/awt.cpp.obj CMakeFiles/client.dir/formes/Matrice.cpp.obj CMakeFiles/client.dir/sauvegarde/Format.cpp.obj CMakeFiles/client.dir/sauvegarde/txt.cpp.obj CMakeFiles/client.dir/sauvegarde/saves/parserCOR.cpp.obj CMakeFiles/client.dir/sauvegarde/saves/parserGroupe.cpp.obj CMakeFiles/client.dir/sauvegarde/saves/parserSegment.cpp.obj CMakeFiles/client.dir/sauvegarde/saves/parserCercle.cpp.obj CMakeFiles/client.dir/sauvegarde/saves/parserPolygone.cpp.obj CMakeFiles/client.dir/sauvegarde/saves/parserTriangle.cpp.obj
   FLAGS = -static-libstdc++ -static-libgcc -g
   LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\client.dir

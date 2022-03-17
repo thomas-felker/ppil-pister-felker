@@ -24,9 +24,6 @@ public:
 
     void save(string query, string filename) override;
 
-    void charger(ClientDessin & client, string filename) override;
-
-    bool saitCharger(string type) override;
 
     operator string() override;
 };

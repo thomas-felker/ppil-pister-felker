@@ -11,24 +11,25 @@ public class main
 
     public static void main(String[] args)
     {
-        int portServeurDessin = 8091;   
-        {
-            ServerSocket serveurDessin = new ServerSocket(portServeurDessin);
-
-            System.out.println("serveur de dessin prêt, \n détails : "+serveurDessin);
-
-            int nombreClients;
-
-            nombreClients = 0;
-
-            while (true)
+        try {
+            int portServeurDessin = 8091;
             {
-                System.out.println("serveur de dessin en attente du prochain client");
-                Socket socket = serveurDessin.accept();
-                ++nombreClients;
-                System.out.println("nouveau client connecté n° = " + nombreClients);
-                SessionDessin sessionDessin = new SessionDessin(socket);                
-                sessionDessin.start();                                                  
+                ServerSocket serveurDessin = new ServerSocket(portServeurDessin);
+
+                System.out.println("serveur de dessin prêt, \n détails : " + serveurDessin);
+
+                int nombreClients;
+
+                nombreClients = 0;
+
+                while (true) {
+                    System.out.println("serveur de dessin en attente du prochain client");
+                    Socket socket = serveurDessin.accept();
+                    ++nombreClients;
+                    System.out.println("nouveau client connecté n° = " + nombreClients);
+                    SessionDessin sessionDessin = new SessionDessin(socket);
+                    sessionDessin.start();
+                }
             }
         }
         catch (IOException e)

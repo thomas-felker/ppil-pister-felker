@@ -29,8 +29,8 @@ public class Segment extends Forme {
         } else {
             args = test[1].split(",");
             this.getCouleur().setName(args[0]);
-            this.getPosition().setXY(Integer.parseInt(args[1].trim()), Integer.parseInt(args[2].trim()));
-            arrivee.setXY(Integer.parseInt(args[3].trim()), Integer.parseInt(args[4].trim()));
+            this.getPosition().setXY(ix + Integer.parseInt(args[1].trim()), iy + Integer.parseInt(args[2].trim()));
+            arrivee.setXY(ix + Integer.parseInt(args[3].trim()), iy + Integer.parseInt(args[4].trim()));
             return true;
         }
     }

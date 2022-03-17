@@ -10,9 +10,9 @@ import java.io.InputStreamReader;
 import java.net.SocketException;
 
 public class SessionDessin extends Thread {
-    Socket socket;
-    BufferedReader fluxEntrant;
-    CadreDessin cadre_;
+    public Socket socket;
+    public BufferedReader fluxEntrant;
+    public CadreDessin cadre_;
 
     /** Crée la session de dessin avec le client distant connecté sur socket
      * @throws IOException

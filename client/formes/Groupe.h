@@ -25,5 +25,5 @@ public:
 
     explicit operator string() override;
 
-
+    Groupe(const string couleur, vector<struct Forme *> formes);
 };

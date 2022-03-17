@@ -43,7 +43,8 @@ public class Polygone extends Forme {
             this.getCouleur().setName(args[0]);
             int cmp = args.length;
             for (int i=2; i<cmp; i=i+2) {
-                points.add(new Vecteur2D(Integer.parseInt(args[i-1].trim()), Integer.parseInt(args[i].trim())));
+                points.add(new Vecteur2D(ix + Integer.parseInt(args[i-1].trim()),
+                        iy +Integer.parseInt(args[i].trim())));
             }
             return true;
         }

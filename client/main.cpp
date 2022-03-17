@@ -14,6 +14,12 @@
 #include "formes/Groupe.h"
 #include "libgraphique/awt.h"
 #include "sauvegarde/txt.h"
+#include "sauvegarde/saves/parserCOR.h"
+#include "sauvegarde/saves/parserSegment.h"
+#include "sauvegarde/saves/parserPolygone.h"
+#include "sauvegarde/saves/parserCercle.h"
+#include "sauvegarde/saves/parserTriangle.h"
+#include "sauvegarde/saves/parserGroupe.h"
 #include <vector>
 #include<math.h>
 
@@ -45,131 +51,76 @@ int main()
         awt * lib = new awt(clientDessin);
         txt * format = new txt(nullptr);
 
-        // format->load(clientDessin, "test.txt", "txt");
+        parserCOR *parser = new parserSegment(nullptr);
+        parser = new parserPolygone(parser);
+        parser = new parserCercle(parser);
+        parser = new parserTriangle(parser);
+        parser = new parserGroupe(parser);
 
+        // Triangle
+        auto * PT1 = new Vecteur2D(1, 0);
+        auto * PT2 = new Vecteur2D(4, -2);
+        auto * PT3 = new Vecteur2D(4, 2);
+        vector<Vecteur2D*> pointsTri;
+        pointsTri.push_back(PT1);
+        pointsTri.push_back(PT2);
+        pointsTri.push_back(PT3);
+        auto * T1 = new Triangle("green", pointsTri);
 
-        // ---------------------------------------------------
-        // Polygone
-        auto * a1 = new Vecteur2D(-10,-10);
-        auto * b1 = new Vecteur2D(50, -10);
-        auto * c1 = new Vecteur2D(50, 50);
-        auto * d1 = new Vecteur2D(-10,50);
+        // Cercle 1
+        auto * centreCercle1 = new Vecteur2D(7, 3);
+        vector<Vecteur2D *> pointsCercle1;
+        pointsCercle1.push_back(centreCercle1);
+        auto * C1 = new Cercle("yellow",pointsCercle1, 2);
 
+        // Rectangle
+        auto * a1 = new Vecteur2D(11,-1);
+        auto * b1 = new Vecteur2D(15, -1);
+        auto * c1 = new Vecteur2D(15, 1);
+        auto * d1 = new Vecteur2D(11,1);
         vector<Vecteur2D *> pointsPoly;
         pointsPoly.push_back(a1);
         pointsPoly.push_back(b1);
         pointsPoly.push_back(c1);
         pointsPoly.push_back(d1);
-        auto * polygone = new Polygone("blue",pointsPoly);
-        cout << "Aire du polygone = " << polygone->calculerAire() << endl;
-        // Vecteur2D trPoly = Vecteur2D(0,100);
-        Vecteur2D homoPoly = Vecteur2D(0,0);
-        Vecteur2D rotaPoly = Vecteur2D(250,250);
-        // polygone->translation(trPoly);
-        // polygone->homothetie(2, homoPoly);
-        // polygone->rotation(M_PI, rotaPoly);
-        // polygone->mondeEcran(*dim);
-        // polygone->dessiner(lib);
-        // polygone->sauvegarder(format, "test");
+        auto * R1 = new Polygone("blue",pointsPoly);
 
+        // Cercle 2
+        auto * centreCercle2 = new Vecteur2D(17, 0);
+        vector<Vecteur2D *> pointsCercle2;
+        pointsCercle2.push_back(centreCercle2);
+        auto * C2 = new Cercle("yellow",pointsCercle2, 1);
 
-        // ---------------------------------------------------
-        // Cercle
-        auto * centreCercle = new Vecteur2D(150, -150);
-        vector<Vecteur2D *> pointsCercle;
-        pointsCercle.push_back(centreCercle);
-        auto * cercle = new Cercle("green",pointsCercle, 50);
-        cout << "Aire du cercle = " << cercle->calculerAire() << endl;
-        // Vecteur2D trCercle = Vecteur2D(0,50);
-        // cercle->translation(trCercle);
-        // cercle->dessiner(lib);
-
-        // ---------------------------------------------------
-        // Triangle
-        auto * a2 = new Vecteur2D(245, 200);
-        auto * b2 = new Vecteur2D(200, 400);
-        auto * c2 = new Vecteur2D(290, 400);
-        vector<Vecteur2D*> pointsTri;
-        pointsTri.push_back(a2);
-        pointsTri.push_back(b2);
-        pointsTri.push_back(c2);
-        auto * triangle = new Triangle("yellow", pointsTri);
-        cout << "Aire du triangle = " << triangle->calculerAire() << endl;
-        Vecteur2D trTriangle = Vecteur2D(20, 0);
-        triangle->translation(trTriangle);
-        // triangle->dessiner(lib);
-
-        // ---------------------------------------------------
-        // Segment
-        auto * dep = new Vecteur2D(50,50);
-        auto * arr = new Vecteur2D(100, 100);
-        vector<Vecteur2D *> pointsSeg;
-        pointsSeg.push_back(dep);
-        pointsSeg.push_back(arr);
-        auto * segment = new Segment("black", pointsSeg);
-        cout << "Longueur / aire du segment = " << segment->calculerAire() << endl;
-        auto* transSeg = new Vecteur2D(0,150);
-        segment->translation(transSeg);
-        // segment->dessiner(lib);
-
-        // ---------------------------------------------------
         // Groupe
         vector<Forme*> formes;
         vector<Vecteur2D*> points;
-        // formes.push_back(polygone);
-        formes.push_back(cercle);
-        formes.push_back(triangle);
-        formes.push_back(segment);
-        auto * groupe = new Groupe("red", points, formes);
+        formes.push_back(T1);
+        formes.push_back(C1);
+        formes.push_back(R1);
+        formes.push_back(C2);
+        auto * G1 = new Groupe("red", points, formes);
 
-        Vecteur2D trGroupe = Vecteur2D(50,50);
-        double aireGr = groupe->calculerAire();
-        cout << "Aire du groupe = " << aireGr << endl;
-        // groupe->translation(trGroupe);
-        // groupe->mondeEcran(*dim);
-        groupe->dessiner(lib);
+        // Translation
+        Vecteur2D vectTransl = Vecteur2D(-4,0);
+        G1->translation(vectTransl);
 
+        // Rotation
+        Vecteur2D vectRota = Vecteur2D(0,0);
+        double teta = M_PI/4;
+        G1->rotation(teta, vectRota);
 
+        // Aire
+        cout << "Aire du groupe = " << G1->calculerAire() << endl;
 
-        /**
-         * Requête ouverture fenêtre graphique :
-         * oss << titre << ", " << bordGauche << ", "
-         * << bordHaut << ", " << largeur << ", "
-         * << hauteur << "\r\n";
-         * ex : Cadre, 600, 100, 500, 500
-         */
+        // Dessin
+        G1->dessiner(lib);
 
-        /**
-         * Requête de dessin :
-         * ex : Forme:Cercle,red,50,50,20,20
-         * Segment * segment = new Segment("red", depart, arrivee_);
-         *     ostringstream oss2 = segment->getQuery();
-         */
+        // Sauvegarde
+        G1->sauvegarder(format, "majoliefigure2");
 
-        /*
-        //fprintf
-        char requete[200] = "";
-        string oldrequete;
-        bool continuer;
-
-        do {
-            oldrequete = string(requete);
-
-            cout << "requete :";
-            cin >> requete;
-
-            continuer = (strcmp(requete, "quitter") != 0);
-
-            if (continuer) {
-                strcat_s(requete, "\r \n");
-
-                int r = send( clientDessin.getSock(), requete, strlen(requete), 0);
-                if (r == SOCKET_ERROR)
-                    throw Erreur("échec de l'envoi de la requête");
-            }
-
-        } while (continuer);
-         */
+        // Chargement
+        Forme * G2 = parser->traiter("majoliefigure2");
+        G2->dessiner(lib);
     }
     catch (Erreur e)
     {

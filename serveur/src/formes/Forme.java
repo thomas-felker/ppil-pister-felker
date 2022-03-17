@@ -10,6 +10,7 @@ public abstract class Forme {
     private Couleur color;
     public String args[];
     public String test[];
+    public int ix, iy;
 
 
     /**
@@ -21,6 +22,8 @@ public abstract class Forme {
         this.cadre = cadre;
         position = new Vecteur2D(0, 0);
         color = new Couleur();
+        ix = cadre.getInsets().left;
+        iy = cadre.getInsets().top;
     }
 
     public Vecteur2D getPosition() {

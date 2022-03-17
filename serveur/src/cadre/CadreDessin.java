@@ -10,6 +10,7 @@ import java.awt.Dimension;
 public class CadreDessin extends Frame
 {
     public Graphics graphics;
+    public double wratio, hratio;
     
     /**
      @brief Constructeur 
@@ -45,6 +46,15 @@ public class CadreDessin extends Frame
         this.createBufferStrategy(numBuffers);
         Thread.sleep(150);  
         graphics = this.getBufferStrategy().getDrawGraphics();
+
+        System.out.println("Largeur = " + largeur + ", hauteur = " + hauteur);
+        int height = Toolkit.getDefaultToolkit().getScreenSize().height;
+        int width = Toolkit.getDefaultToolkit().getScreenSize().width;
+        System.out.println("Largeur = " + width + ", hauteur = " +height);
+
+        wratio = width / largeur;
+        hratio = height / hauteur;
+        System.out.println("Largeur ratio = " + wratio + ", hauteur = " +hratio);
     }
 
 }

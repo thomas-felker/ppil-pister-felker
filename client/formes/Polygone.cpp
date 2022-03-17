@@ -1,6 +1,8 @@
 #include "Polygone.h"
 #include "Triangle.h"
 
+using namespace std;
+
 Polygone::Polygone(const string &couleur, const vector<Vecteur2D *> &points) :
         Forme("Polygone", couleur, points) {}
 

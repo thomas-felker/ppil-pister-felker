@@ -54,9 +54,16 @@ void Groupe::mondeEcran(const Vecteur2D &dim) {
 }
 
 Groupe::operator string() {
-    string res = "";
+    string res = "Groupe:";
     for (int i = 0; i < formes.size(); i++) {
-        res += string(*formes[i]);
+        res += string(*formes[i]) + "/";
     }
     return res;
+}
+
+Groupe::Groupe(const string couleur, vector<struct Forme *> formes) :
+    Forme("Groupe", couleur, *(new vector<Vecteur2D *>)), formes(formes){
+    for(int i = 0; i < formes.size(); i++) {
+        formes[i]->setCouleur(couleur);
+    }
 }
