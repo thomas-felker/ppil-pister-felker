@@ -1,0 +1,1 @@
+Groupe:Triangle:red,-2,1,-1,0,1,0/Cercle:red,4,0,2/Polygone:red,4,-3,7,-5,8,-5,5,-3/Cercle:red,9,-6,1/
