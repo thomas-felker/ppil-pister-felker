@@ -137,8 +137,7 @@ public :
      * */
     virtual void rotation (const double teta, const Vecteur2D & invariant) {
         for (int i = 0; i < points.size(); i++) {
-            points[i]->setX(points[i]->rotation(teta, invariant).getX());
-            points[i]->setY(points[i]->rotation(teta, invariant).getY());
+            // points[i] = points[i]->rotation(teta, invariant);
         }
     }
 

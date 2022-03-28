@@ -1,7 +1,11 @@
 #include "Cercle.h"
 
 Cercle::Cercle(const string &couleur, const vector<Vecteur2D *> &points, double rayon) :
-        Forme("Cercle",couleur,points),rayon(rayon) {}
+        Forme("Cercle",couleur,points),rayon(rayon) {
+    if (rayon < 0) {
+        throw Erreur("rayon < 0");
+    }
+}
 
 Cercle::~Cercle() = default;
 

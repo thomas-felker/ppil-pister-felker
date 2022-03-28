@@ -25,5 +25,7 @@ public:
 
     explicit operator string() override;
 
+    double calculerAire1();
+
     Groupe(const string couleur, vector<struct Forme *> formes);
 };

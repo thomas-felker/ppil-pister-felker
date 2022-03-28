@@ -17,6 +17,14 @@ void Groupe::dessiner(LibrairieGraphique *Librairie) {
 
 double Groupe::calculerAire() {
     double res = 0;
+    for(Forme * f : formes) {
+        res += f->calculerAire();
+    }
+    return res;
+}
+
+double Groupe::calculerAire1() {
+    double res = 0;
     for(int i = 0; i < formes.size(); i++) {
         res += formes[i]->calculerAire();
     }
